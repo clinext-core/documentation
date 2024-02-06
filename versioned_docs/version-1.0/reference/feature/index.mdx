@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+
+# Index
+
+## Concept
+Contains the models logic handled by the feature.
+
+## Folder structure
+
+```bash
+├── models
+│   ├── classA
+│   │   │   ├── class
+│   │   │   │   ├── index.js
+│   │   │   │   ├── features.js
+│   │   │   ├── functions
+│   │   │   │   ├── index.js
+│   │   │   ├── triggers
+│   │   │   │   ├── index.js
+```
+
+- The **class** folder contains 
+    - the es6 models handled by the feature.
+    - the features declaration.
+- The **functions** folder contains cloud functions specific to the class
+- The **triggers** folder contains triggers functions
+
+## Usage
+### Declare a class
+
+```js
+export default class ClassA extends CliNext.App.Object {
+    constructor() {
+        super('ClassA')
+    }
+}
+```
+### Use features
+```js
+export default [
+    //featureslist 
+]
+```
+[See declaring features](../../guides/use.mdx)
+
+### Use functions
+### Use triggers
+
+## Example

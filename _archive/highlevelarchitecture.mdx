@@ -1,0 +1,85 @@
+---
+sidebar_position: 6
+---
+
+import SVGComponent from '@site/src/components/generic/svg'
+
+# System design
+
+CliNext is a Node JS template that helps orchestrate features and their respective models for the entire lifecycle of a server.
+CliNext is built on top of Parse Server and Express JS with the intention to handle features along the features Parse Server already serves.
+CliNext at its core is a template that works hand in hand with the clinext-engine which handles all the heavy lifting of registering features, computing models and their schemas, handling migrations and more.
+
+## Components
+- An Express app
+- A Parse Server instance
+
+CliNext exclusively uses ES modules.
+
+## Boot process
+
+When the server is launched, the clinext-engine performs the following tasks:
+
+- Launches an Express app
+- Computes the target database schema by aggregating the custom app tables and the features applied to those tables
+- Checks if a schema migration is necessary. It migrates the schema or not accordingly
+- Binds every feature to the events triggered by the tables that use them
+- Exposes every feature custom function
+- Registers jobs
+
+
+## App stack
+
+<div className={'bg-red-200 flex p-8'}>
+<SVGComponent 
+Svg={require('./appstack.svg').default} 
+className={`w-full`} 
+role="img" />
+</div>
+
+### Node JS
+
+### Express JS
+
+### Parse Server
+
+## System design
+
+A clinext deployment will use a few other components to run alongside a main clinext app.
+
+<SVGComponent 
+Svg={require('./components.svg').default} 
+className={`w-full`} 
+role="img" />
+
+### CliNext app
+The actual clinext app
+*Mandatory*
+
+### CliNext dashboard
+CliNext Dashboard is a standalone dashboard for managing CliNext apps.
+- Create, edit and delete schema (not available with CliNext)
+- Create, edit and delete security rules (not available with CliNext)
+- Create, edit and delete data
+
+[Github](https://github.com/parse-community/parse-dashboard)
+*Optional*
+
+### App database
+The mongodb or PostGreSQL database
+*Mandatory*
+
+### Minio
+An S3 like bucket server for storing files
+*Mandatory*
+
+### Utils database
+An utilitary database used by the arbiter to store migration status and current instances
+*Mandatory*
+
+### Redis cache 
+Optional
+
+### Live Query Server
+Optional
+

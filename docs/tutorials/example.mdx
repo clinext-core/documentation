@@ -1,0 +1,97 @@
+---
+sidebar_position: 4
+---
+
+import BashTabs from '@site/src/components/generic/bashTabs'
+
+# Example
+
+This example will walk you through the building of a fully functional clinext app.
+The source code is available at [https://github.com/clinext-community/sample](https://github.com/clinext-community/sample)
+
+We want to build a CliNext app that:
+- #TODO
+
+## 1. Install the generator
+
+<BashTabs npm={"npm install -g generator-clinext"} />
+
+## 2. Generate a new server
+
+Generate a new clinext app by running the command:
+
+```bash
+mkdir myapp
+cd myapp
+yo clinext -q -t app -n "MyApp"
+```
+
+You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+
+You will be prompted to enter the basic informations needed to start a full-fledged clinext app.
+
+The command also installs all necessary dependencies you need to run clinext.
+
+## 3. Start your server
+
+Run the development server:
+
+<BashTabs yarn={"yarn start"} />
+
+The `cd` command changes the directory you're working with. In order to work with your newly created clinext-parse app, you'll need to navigate the terminal there.
+
+The `yarn start` command builds your app locally and serves it through a development server, ready for you to view at http://localhost:1391/.
+
+
+You can now open the CliNext dashboard at [http://localhost:4040](http://localhost:4040) and view your application data.
+
+:::info
+Note that contrarily to Parse Server Dashboard, CliNext Dashboard does not permit class creation and modification via the UI. 
+This is to enforce the unique ability of CliNext to predict schema and handle migrations automatically, thus avoiding environment discrepancies.
+The sole source of truth is the features designated schema files.
+:::
+
+## 4. Add a class
+
+At this point the app is fully functional but lacks any high level behavior.
+By default a CliNext app contains the following models: *_User, _Session, _Installation, CliNextApp*
+Add a custom class:
+
+```bash
+yo clinext -q -t class -n "BlogPost"
+```
+
+:::note
+You can add class manually by adding a class payload to the app/schema/1.0.0/index.json
+:::
+
+Restart the app to reflect the changes:
+<BashTabs yarn={"yarn stop \nyarn start"} />
+
+## 5. Add features
+
+We want to make:
+- The app (thus clinextApp class) able to send notifications and emails, have a reference for countries, locales and currency 
+```bash
+yo clinext -q -t communityfeature --useAppFeature --targetClassName CliNextApp --feature notifiable
+```
+
+- The user (thus _User class) be followable, slugable, avatarable, localable, countryable
+```bash
+yo clinext -q -t communityfeature --useAppFeature --targetClassName _User --feature notifiable
+```
+
+- A blog post (thus BlogPost class) to be commentable, reviewable, publishable, localable, countryable, slugable
+We want to Add a community feature to the CliNextApp to give it 
+```bash
+yo clinext -q -t communityfeature --useAppFeature --targetClassName BlogPost --feature notifiable
+```
+At this point the app is useful for blogging.
+
+Restart the app to reflect the changes:
+<BashTabs yarn={"yarn stop \nyarn start"} />
+
+
+# Uninstall
+
+<BashTabs npm={"npm uninstall -g generator-clinext"} />

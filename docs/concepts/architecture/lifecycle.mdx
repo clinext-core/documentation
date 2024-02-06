@@ -1,0 +1,54 @@
+---
+sidebar_position: 2
+---
+import SVGPlus from '@site/src/components/generic/svgplus'
+import SVGComponent from '@site/src/components/generic/svg'
+
+# Lifecycle
+
+When the server is launched, the clinext-engine performs the following tasks:
+
+- Launches an Express app
+- Computes the target database schema by aggregating the custom app tables and the features applied to those tables
+- Checks if a schema migration is necessary. It migrates the schema or not accordingly
+- Binds every feature to the events triggered by the tables that use them
+- Exposes every feature custom function
+- Registers jobs
+
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#fff',
+      'primaryTextColor': '#323232',
+      'primaryBorderColor': '#323232',
+      'lineColor': '#323232',
+      'fontFamily': 'Space Grotesk',
+      'fontSize': '14px'
+    }
+  }
+}%%
+graph TD
+    A(Start) --> buildSchema(Compute schema)
+    buildSchema --> launchExpressApp(Launch Express App)
+    launchExpressApp --> beforeInit(Before init)
+    beforeInit --> registerModels(Register models)
+    registerModels --> wireSchema(Wire schema)    
+    wireSchema --> seed(Seed)        
+    seed --> config(Setup config)
+    config --> afterInit(After init)
+    afterInit --> B(App launched)
+```
+
+
+
+
+
+
+
+
+
+
+

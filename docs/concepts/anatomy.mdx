@@ -1,0 +1,87 @@
+---
+sidebar_position: 4
+---
+
+import SVGComponent from '@site/src/components/generic/svg'
+
+# Anatomy of a CliNext app
+
+## Project structure
+```bash
+├── index.js
+├── app
+├── ├── ...
+├── features
+├── ├── ...
+├── clinext.config.js
+├── .env
+└── package.json
+```
+
+- The clinext config is clinext.config.js
+- The clinext app entry point is index.js
+- The app feature is in /app
+- The local features are in /features
+
+
+# Anatomy of a feature
+
+Any feature respects the following root folder structure:
+
+```bash
+┌── main.js
+├── target
+├──── class
+├──── triggers
+├── schema
+├── config
+├── models
+├── jobs
+├── seed
+├── services
+├── lib
+├── assets
+├── docs
+├── livemodels.js
+└── main.json
+```
+
+
+## System design of a full-fledged local clinext app
+A fully functional clinext deployment will use a few other components to run alongside a main clinext app.
+These components are installed and run automatically when using the quick start CLI command.
+They are defined in the app feature system's docker-compose file.
+
+
+### CliNext app
+The actual clinext app
+*Mandatory*
+
+### CliNext dashboard
+CliNext Dashboard is a standalone dashboard for managing CliNext apps.
+- Create, edit and delete schema (not available with CliNext)
+- Create, edit and delete security rules (not available with CliNext)
+- Create, edit and delete data
+
+[Github](https://github.com/parse-community/parse-dashboard)
+*Optional*
+
+### App database
+The mongodb or PostGreSQL database
+*Mandatory*
+
+### Minio
+*Mandatory*
+An S3 like bucket server for storing files
+
+
+### Utils database
+An utilitary database used by the arbiter to store migration status and current instances
+*Mandatory*
+
+### Redis cache 
+Optional
+
+### Live Query Server
+Optional
+
