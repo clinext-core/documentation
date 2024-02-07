@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclinext=self.webpackChunkclinext||[]).push([[6736],{9379:e=>{e.exports=JSON.parse('{"title":"Tutorials","slug":"/category/tutorials","permalink":"/docs/category/tutorials","navigation":{"previous":{"title":"Kubernetes","permalink":"/docs/guides/deployment/kubernetes"},"next":{"title":"Blog","permalink":"/docs/category/blog"}}}')}}]);

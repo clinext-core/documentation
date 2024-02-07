@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclinext=self.webpackChunkclinext||[]).push([[8120],{9406:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/clinext","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

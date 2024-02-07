@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclinext=self.webpackChunkclinext||[]).push([[7416],{8252:e=>{e.exports=JSON.parse('{"title":"Concepts","slug":"/category/concepts","permalink":"/docs/next/category/concepts","navigation":{"previous":{"title":"Overview","permalink":"/docs/next/overview"},"next":{"title":"Motivation","permalink":"/docs/next/concepts/motivation"}}}')}}]);
