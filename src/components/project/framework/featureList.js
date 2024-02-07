@@ -12,7 +12,7 @@ export default [
   },
   {
     title: 'Options simplified',
-    Svg: require('@site/static/img/shapes.svg').default,
+    Svg: require('@site/static/img/noun-settings-1269041.svg').default,
     description: (
       <>
         Options can be defined at a global level and inherited at a command level to promote reuse.

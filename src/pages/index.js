@@ -10,10 +10,10 @@ import HomepageFeatures2 from '../components/project/homepageFeatures2'
 // import HomepageFeatures3 from '../components/project/homepageFeatures3'
 // import HomepageFeatures4 from '../components/project/homepageFeatures4'
 // import EverythingIsAFeature from '../components/project/everythingIsAFeature'
-import Pollination from '../components/project/pollination'
+// import Pollination from '../components/project/pollination'
 // import FeaturesSample from '../components/domain/featuresSample'
 import Manifest from '../components/project/manifest'
-import Definitions from '../components/project/definitions'
+// import Definitions from '../components/project/definitions'
 
 export default () => {
   const { siteConfig } = useDocusaurusContext()

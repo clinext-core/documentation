@@ -8,7 +8,7 @@ sidebar_position: 7
 CliNext is still experimental and its api may change in the future.
 :::
 
-![logo](/img/icon.png)
+![logo](/img/icon_xs.svg)
 
 **CliNext** uses GPL:
 

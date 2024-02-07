@@ -3,57 +3,6 @@ sidebar_position: 7
 ---
 
 import BashTabs from '@site/src/components/generic/bashTabs'
-import FeatureWidget from '@site/src/components/domain/widgets/feature.js'
 
 # Packages
 
-## [CliNext Server](https://github.com/clinext-core/clinext-engine)
-
-The clinext server is responsible for all the CliNext related operations on a clinext template project.
-It is available as an npm dependency.
-
-<BashTabs npm={`npm install -g @clinext/server`} />
-
-## [CliNext Manifest](https://github.com/clinext-core/clinext-manifest)
-
-The CliNext manifest is a utility that builds a feature's manifest and documents it.
-It is available as an npm dependency.
-
-<BashTabs npm={`npm install -g @clinext/tools`} />
-
-## [CliNext Parse Server Adapter](https://github.com/clinext-core/parse-server-engine)
-
-The CliNext Parse Server Adapter is an example of a engine.
-<BashTabs npm={`npm install @clinext/parse-server-engine`} />
-
-## [CliNext CLI (yeoman generator)](https://github.com/clinext-core/generator-clinext)
-
-The clinext CLI is responsible for scaffolding and manipulating clinext and feature projects.
-
-It is available as an npm package. It uses under the hood:
-- the CliNext server 
-- the CliNext Features Registry API
-
-<BashTabs npm={`npm install -g @clinext/cli`} />
-
-
-## [CliNext Registry](https://clinext.app)
-
-The clinext features registry is a centralized  features repository.
-
-It is available at clinext.app
-
-It serves a public api at api.clinext.app
-
-## CliNext Dashboard
-
-The clinext dashboard is a fork of the Parse Dashboard aimed at providing the best CliNext experience.
-
-It is available with the CLI when launching a full-fledged local app.
-
-## CliNext Widgets
-
-CliNext widgets are embeddable React components that can display a feature for example.
-
-<FeatureWidget id={'@clinext-community/framable'} />
-<FeatureWidget id={'@clinext-community/framable'} size={'m'}/>

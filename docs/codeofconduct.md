@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Code of conduct
 
-![logo](/img/icon.png)
+![logo](/img/icon_xs.svg)
 
 Contributor Covenant Code of Conduct
 

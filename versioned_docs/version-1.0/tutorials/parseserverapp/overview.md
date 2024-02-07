@@ -8,7 +8,7 @@ sidebar_position: 0
 CliNext is still experimental and its api may change in the future.
 :::
 
-![logo](/img/icon.png)
+![logo](/img/icon_xs.svg)
 
 **CliNext** is a Node JS framework built for features running on your framework engine of choice. It provides a concise, easy to use and scalable template to get the best of features.
 

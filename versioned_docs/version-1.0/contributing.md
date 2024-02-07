@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Contribution guide
 
-![logo](/img/icon.png)
+![logo](/img/icon_xs.svg)
 
  Contributing to CliNext
 
