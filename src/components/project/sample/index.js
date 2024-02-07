@@ -15,7 +15,7 @@ export default () => {
         `}>
       <h2>{`Quick start`}</h2>
       <p className={``}>
-        <BashTabs npm={`npx @clinext/cli app new --quick\nnpm run start`} />
+        <BashTabs npm={`npx clinext new --quick\nnpm run start`} />
       </p>
     </div>
   </div>
