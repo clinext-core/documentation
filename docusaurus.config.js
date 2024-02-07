@@ -7,16 +7,22 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 // const lightCodeTheme = require('prism-react-renderer').themes.github
 // const darkCodeTheme = require('prism-react-renderer').themes.dracula
 
-const organizationName = "clinextcommunity"
-const projectName = "clinext"
+
+
 require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CliNext',
   tagline: 'A feature oriented Node JS framework',
-  url: 'https://docs.clinext.app',
+  url: 'https://clinext.github.io',
   baseUrl: '/',
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: "clinext", // Usually your GitHub org/user name.
+  projectName: "clinext", // Usually your repo name.
+  deploymentBranch: 'main',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico', //https://icons8.com/icon/set/animals/plasticine
@@ -73,11 +79,7 @@ const config = {
     '@docusaurus/theme-mermaid',
     "docusaurus-theme-openapi-docs"
   ],
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName, // Usually your GitHub org/user name.
-  projectName, // Usually your repo name.
-
+  
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
