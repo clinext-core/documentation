@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclinext=self.webpackChunkclinext||[]).push([[3836],{4568:e=>{e.exports=JSON.parse('{"title":"Routes","slug":"/category/routes","permalink":"/docs/category/routes","navigation":{"previous":{"title":"Use a feature","permalink":"/docs/guides/use"},"next":{"title":"Add a GET route","permalink":"/docs/guides/routes/add"}}}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclinext=self.webpackChunkclinext||[]).push([[4184],{72:e=>{e.exports=JSON.parse('{"label":"clinext","permalink":"/blog/tags/clinext","allTagsPath":"/blog/tags","count":1}')}}]);
