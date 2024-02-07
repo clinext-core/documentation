@@ -19,9 +19,9 @@ const config = {
   baseUrl: '/',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "clinext", // Usually your GitHub org/user name.
-  projectName: "clinext", // Usually your repo name.
-  deploymentBranch: 'main',
+  organizationName: "clinext-core", // Usually your GitHub org/user name.
+  projectName: "clinext.github.io", // Usually your repo name.
+  // deploymentBranch: 'main',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
