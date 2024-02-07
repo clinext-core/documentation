@@ -8,7 +8,7 @@ sidebar_position: 1
 CliNext is still experimental and its api may change in the future.
 :::
 
-![logo](/img/icon.svg)
+![logo](/img/icon.png)
 <!-- ![logo](/img/grasshopper.png) -->
 <!-- <img src="/img/2452897.png" alt="clinext" style={{ width:'200px' }}/>
 <img src="/img/plus2.png" alt="plus" style={{ width:'50px', paddingBottom: 70, marginLeft: 30, marginRight: 30 }}/>

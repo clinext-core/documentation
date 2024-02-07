@@ -2,8 +2,8 @@ import React from 'react';
 
 export default [
   {
-    title: 'Inter-feature Services',
-    Svg: require('@site/static/img/noun-video-doorbell-4816423.svg').default,
+    title: 'Validators',
+    Svg: require('@site/static/img/noun-bee-4883469.svg').default,
     description: (
       <>
         When features need to communicate the CliNext.Services namespace is ready for inter-feature communication. Any feature can register an api associated with a unique ID that can be called with no knowledge of the feature that handles the operation.
@@ -11,7 +11,7 @@ export default [
     ),
   },
   {
-    title: 'Automatic class and feature seed',
+    title: 'Transformers',
     Svg: require('@site/static/img/noun-seed-4962548.svg').default,
     description: (
       <>
@@ -21,7 +21,7 @@ export default [
   },
 
   {
-    title: 'Advanced config per feature',
+    title: 'Side effects',
     Svg: require('@site/static/img/noun-settings-1269041.svg').default,
     description: (
       <>

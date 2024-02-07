@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Roadmap
 
-![logo](/img/icon.svg)
+![logo](/img/icon.png)
 Ongoing
 ```mermaid
 %%{

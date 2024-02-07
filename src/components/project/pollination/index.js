@@ -38,7 +38,7 @@ export default () => {
           max-w-4xl
         `}>
           <h2 className='text-4xl'>
-            {`Introducing feature pollination 🐝 🍯`} <i></i>
+            {`Ok, what would the perfect CLI generator look like ? 🤖`} <i></i>
           </h2>
           <p className={`text-lg `}>
             CliNext is not a traditional Node JS framework as it does not expose any api or route by itself, nor does it contain any server capacity. Instead it pollinates database tables (models) with features (independent and agnostic feature oriented extensions) so that a traditional Node JS framework (adapted by a framework engine) can use them.
@@ -53,7 +53,7 @@ export default () => {
           {/* <div className={``}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/concepts/philosophy">
+              to="/docs/concepts/motivation">
               Documentation
             </Link>
           </div> */}

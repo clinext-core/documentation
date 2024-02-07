@@ -8,11 +8,16 @@ import SVGComponent from '@site/src/components/generic/svg'
 
 ## Project structure
 ```bash
-├── index.js
-├── app
+├── app.js
+├── app.js
 ├── ├── ...
-├── features
-├── ├── ...
+├── commands
+├────── command A
+├──────────── sub command X
+├──────────── sub command Y
+├────── command B
+├──────────── sub command Z
+├──────────── sub command W
 ├── clinext.config.js
 ├── .env
 └── package.json
@@ -28,7 +33,7 @@ import SVGComponent from '@site/src/components/generic/svg'
 
 Any feature respects the following root folder structure:
 
-```bash
+```js
 ┌── main.js
 ├── target
 ├──── class

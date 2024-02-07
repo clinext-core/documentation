@@ -1,7 +1,7 @@
 
 # FAQ 💡
 
-![logo](/img/icon.svg)
+![logo](/img/icon.png)
 
 <!-- ## CliNext -->
 

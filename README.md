@@ -64,7 +64,7 @@ CliNext comes bundled with Parse Server that sets up a working set of tables tha
 
 ## License
 
-MIT © [clinext-community](https://github.com/clinext-community)
+MIT © [clinext-community](https://github.com/clinext-core)
 
 
 

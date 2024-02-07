@@ -5,22 +5,14 @@ import SVGPlus from '@site/src/components/generic/svgplus'
 import Manifest from '@site/src/components/project/manifest/actual'
 import Definitions from '@site/src/components/project/definitions/actual'
 
-# Philosophy
+# Motivation
 
-![logo](/img/icon.svg)
+![logo](/img/icon.png)
 
-<Definitions noLink align={'left'}/>
-<Manifest noLink align={'left'}/>
 
 ## Why another framework?
-We created the features in our Node JS + Parse server project. 
-What was an experience to ease the backend development quickly became a good practice that helped us keep a clean codebase. 
-They worked so well we decided to streamline their integration with the code base for future projects. 
-We were inspired by the powerful ways NextJs improved the React experience by providing an efficient template on top of it. 
-Yet we did not want to hide the Parse Server framework behind ours as we truly love Parse. 
-CliNext allows to tap into all the existing and upcoming Parse features and yet it dramatically simplifies the development process. 
-A well designed CliNext project will comprise almost nothing more than the actual models and business logic of the platform, 
-other repetitive functions and logics will use existing features implemented by the community or entreprise-private features.
+We used yeoman as our CLI framework in the past. Yeoman quickly became hard to maintain. 
+#TODO
 
 ## Principles
 ### Convention over configuration
@@ -40,13 +32,6 @@ Wikipedia
 </a>
 
 
-### Feature first 
-When refactoring code we can either group our files by the technical function they provide or the feature they provide the end user.
-CliNext chooses to emphasize on features the most as it yields substantial benefits for the teams and the orgranization as a whole. 
-<a href='https://gist.github.com/arnausd23/137bab46215d69023729a1b30fb3ec9b'>
-Read more
-</a>
-
 ### Extreme refactoring
 <i>Refactor mercilessly</i>
 <br/>
@@ -65,31 +50,20 @@ Extreme refactoring
 <i>Functional programming is a paradigm of building computer programs using expressions and functions without mutating state and data.
 By respecting these restrictions, functional programming aims to write code that is clearer to understand and more bug resistant.</i>
 
-### Liskov substitution principle
-<i>Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.</i>
-
-
-
-
 
 ### Other influences
 - <a href='https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/'><i>Code That Fits in Your Head</i></a> book by Mark Seemann
-- JAVA Spring Boot
-- Express JS
-- Fastify JS
-- Microservices
-- Parse Server
-- Domain Driven Design
-
+- Gluegun
+- Yargs
 
 
 ## Should you use CliNext?
-CliNext is likely a good fit for you if
-- You want to group the development of your server by capacity
-- You want to reuse a capacity (feature) over different models without copying it over and over
-- You want to make that capacity available throughout your organization or publish it on the web
-- You are building a new platform from scratch but you don't want reinvent the wheel for the usual suspects: social interactions, versionning, data consistency over deletion 
 
+CliNext is likely a good fit for you if
+- You want to quickly build a CLI for your project
+- You want to reuse an option over different commands without copying it over and over
+- You want to use conventionned validators and transformers
+- You want to use validators, transformers and side effects programmatically
 
 ![logo](/art/buret.png)
 <small>Simon Buret, The blessings, 2022</small>

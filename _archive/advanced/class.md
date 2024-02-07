@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Feature class 💡
 
-![logo](/img/icon.svg)
+![logo](/img/icon.png)
 
 <!-- ## CliNext -->
 

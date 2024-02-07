@@ -30,7 +30,7 @@ export default ({
     },
     schema: {
         queryString: {
-            protocolId: { type: 'string' }
+            featureId: { type: 'string' }
         },
         response: {
             200: {
@@ -100,7 +100,7 @@ export default ({
             throw ({ message: "No adapter found", code: 204 })
         }
         const payload = {
-            protocolId: bridgeId,
+            featureId: bridgeId,
             id: result.id,
             index: result.get('indexContent'),
             documentation: result.get('documentation'),

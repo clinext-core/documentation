@@ -97,7 +97,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-community/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-core/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
@@ -106,7 +106,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-community/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-core/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -165,7 +165,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'concepts/philosophy',
+            docId: 'concepts/motivation',
             position: 'right',
             label: 'Concepts',
           },
@@ -238,7 +238,7 @@ const config = {
           //   to: '/blog', label: 'Blog', position: 'left'
           // },
           {
-            href: 'https://github.com/clinext-community',
+            href: 'https://github.com/clinext-core',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -253,7 +253,7 @@ const config = {
           //   items: [
           //     {
           //       label: 'Guides',
-          //       to: '/docs/concepts/philosophy',
+          //       to: '/docs/concepts/motivation',
           //     },
           //   ],
           // },
@@ -300,7 +300,7 @@ const config = {
           //     },
           //     // {
           //     //   label: 'GitHub',
-          //     //   href: 'https://github.com/clinext-community/clinext-parse',
+          //     //   href: 'https://github.com/clinext-core/clinext-parse',
           //     // },
           //   ],
           // },
