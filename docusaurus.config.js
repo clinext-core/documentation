@@ -16,7 +16,7 @@ const config = {
   title: 'CliNext',
   tagline: 'A feature oriented Node JS framework',
   url: 'https://clinext.github.io',
-  baseUrl: '/',
+  baseUrl: '/documentation',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "clinext-core", // Usually your GitHub org/user name.
