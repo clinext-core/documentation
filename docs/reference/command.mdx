@@ -20,12 +20,26 @@ types = {{
  data={{
     header: {
         columns: [
-            "Parameter", 
-            "Type", 
-            "Description", 
-            "Default value", 
-            "Mandatory"
-            ] 
+            {
+                id: "parameter",
+                label:"Parameter", 
+            },
+            {
+                id: "type",
+                label:"Type", 
+            },
+            {
+                id: "description",
+                label:"Description", 
+            },
+            {
+                id: "defaultValue",
+                label:"Default value", 
+            },
+            {
+                id: "mandatory",
+                label:"Mandatory", 
+            },] 
     },
     rows: 
     [
@@ -95,6 +109,107 @@ types = {{
                     type: 'boolean',
                     value: false
                 }]        
+        },
+        ]
+}} />
+
+
+<Table
+isJson
+types = {{
+    rootPath: '',
+    items: [{
+        id: "transformer",
+        path: "transformer",
+        name: "Transformer",
+        description: "A combination of display, in and out transformers to apply to an input or value."
+    }]
+}}
+ data={{
+    header: {
+         columns: [
+            {
+                id: "parameter",
+                label:"Parameter", 
+            },
+            {
+                id: "type",
+                label:"Type", 
+            },
+            {
+                id: "description",
+                label:"Description", 
+            },
+            {
+                id: "defaultValue",
+                label:"Default value", 
+            },
+            {
+                id: "mandatory",
+                label:"Mandatory", 
+            },] 
+    },
+    rows: 
+    [
+        {
+            parameter: "_clinextType", 
+            type: "string", 
+            description: "CliNext module type", 
+            defaultValue: "command",
+            mandatory:{
+                type: 'boolean',
+                value: false
+            }
+        },
+        {            
+            parameter: "name", 
+            type: "string", 
+            description: "Command unique name", 
+            defaultValue: "",
+            mandatory:{
+                type: 'boolean',
+                value: true
+            }
+        },
+        {
+            parameter: "_clinextType", 
+            type: "string", 
+            description: "CliNext module type", 
+            defaultValue: "command",
+            mandatory:{
+                type: 'boolean',
+                value: false
+            }
+        },
+        {
+            parameter: "_clinextType", 
+            type: "string", 
+            description: "CliNext module type", 
+            defaultValue: "command",
+            mandatory:{
+                type: 'boolean',
+                value: false
+            }
+        },
+        {
+            parameter: "_clinextType", 
+            type: "string", 
+            description: "CliNext module type", 
+            defaultValue: "command",
+            mandatory:{
+                type: 'boolean',
+                value: false
+            }
+        },
+        {
+            parameter: "_clinextType", 
+            type: "string", 
+            description: "CliNext module type", 
+            defaultValue: "command",
+            mandatory:{
+                type: 'boolean',
+                value: false
+            }
         },
         ]
 }} />
