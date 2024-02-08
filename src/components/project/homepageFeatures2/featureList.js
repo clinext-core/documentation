@@ -19,7 +19,6 @@ export default [
       </>
     ),
   },
-
   {
     title: 'Side effects',
     Svg: require('@site/static/img/noun-strategic-3754842.svg').default,

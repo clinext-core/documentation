@@ -4,9 +4,7 @@ sidebar_position: 7
 
 # License
 
-:::info
-CliNext is still experimental and its api may change in the future.
-:::
+
 
 ![logo](/img/icon_xs.svg)
 
