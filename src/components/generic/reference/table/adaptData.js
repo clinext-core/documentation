@@ -1,7 +1,8 @@
 import React from 'react'
 import Badge from './components/badge.js'
+import TypeView from './components/type.js'
 
-export default  data => {
+export default  ({data, types}) => {
   const { header, rows} = data
   let _rows = rows.map(row => {
     const { columns } = row
@@ -12,7 +13,7 @@ export default  data => {
         case 'string': {
           return {
             id: columnIndex,
-            value:  <i>{column}</i>
+            value: column
           }
         }
         default:{
@@ -24,6 +25,37 @@ export default  data => {
                 value:  <Badge name={column.value ? "True": "False" } />
               }
             }
+            case 'element':{
+              const Element = column.value
+              return {
+                id: columnIndex,
+                value:  <Element />
+              }
+            }
+            case 'type':{
+              const {value} = column
+              let item = types.items.filter(a => a.id === value)
+              if(!item || !item.length){
+                break
+              }
+
+              item = item[0]              
+              const url = `${item.path}`
+              const { mode } = column
+              let label = item.name
+              switch(mode){
+                case 'array':{
+                  label = `[${item.name}]`
+                }break
+                default: break
+              }
+              return {
+                id: columnIndex,
+                value: <TypeView name={label} url={url}
+                tooltip={item.description} />
+              }
+            }
+            default: break
           }
         }
           break

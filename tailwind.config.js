@@ -1,3 +1,5 @@
+// https://dev.to/shannonajclarke/using-tailwindcss-v3-in-docusaurus-in-5-steps-5c26
+
 const colors = require('tailwindcss/colors')
 
 // tailwind.config.js

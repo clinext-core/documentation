@@ -12,21 +12,21 @@ export default (props) => {
         })            
      }
     </thead>
-     <tbody>
-     {
+    <tbody>
+    {
       rows.map(row => {
         return <tr key={row.id}>
             {
-             row.columns.map(column => {
+              row.columns.map(column => {
             //  return <i>{column.value}</i>
                 return <td key={column.id} className=''> 
                   {column.value} 
                 </td>
-             })
+              })
             }
           </tr>
       })
-     }
+    }
     </tbody>
     </table>
 }

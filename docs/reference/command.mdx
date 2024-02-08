@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 import Table from '@site/src/components/generic/reference/table'
 
-# Option
+# Command
 
 
 <Table
@@ -29,6 +29,18 @@ types = {{
     },
     rows: 
     [
+        {
+            id: "d",
+            columns: [
+                "_clinextType", 
+                "string", 
+                "CliNext module type", 
+                "command", 
+                {
+                    type: 'boolean',
+                    value: false
+                }]        
+        },
         {
             id: "d",
             columns: [
