@@ -27,6 +27,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico', //https://icons8.com/icon/set/animals/plasticine
   plugins: [
+    ['drawio', {}],
     require.resolve('docusaurus-plugin-image-zoom'),
     // [
     //   'docusaurus2-dotenv',

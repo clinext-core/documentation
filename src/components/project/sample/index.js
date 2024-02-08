@@ -13,7 +13,7 @@ export default () => {
           align-middle                
           max-w-xl
         `}>
-      <h2>{`Quick start`}</h2>
+      <h2 className='text-4xl'>{`Quick start`}</h2>
       <p className={``}>
         <BashTabs npm={`npx clinext new --quick\nnpm run start`} />
       </p>

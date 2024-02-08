@@ -2,6 +2,30 @@
 sidebar_position: 2
 ---
 
+import Table from '@site/src/components/generic/table'
+
 # Option
 
-![logo](/img/noun-settings-1269041.svg)
+<Table data={{
+    header: {
+        columns: ["Parameter", "Type", "Default value", "Mandatory"] 
+    },
+    rows: 
+    [{
+        id: "d",
+        columns: ["name", "string", "b", true]        
+    },
+    {
+        id: "b",
+        columns: ["message", "string", "b", false]        
+    },
+    {
+        id: "b",
+        columns: ["type", "string", "b", false]        
+    },
+    {
+        id: "b",
+        columns: ["prompType", "string", "b", false]        
+    },
+    ]
+}} />

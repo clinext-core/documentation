@@ -2,10 +2,11 @@ import React from 'react'
 // import LogoAnimated from '../logo/animated'
 import Link from '@docusaurus/Link'
 
-export default ({noLink = false,
-  align = 'center'}) =>  <div class={`                
+export default ({
+  noLink = false,
+  align = 'center'}) =>  <div class={`
 flex
-justify-center                 
+justify-center
 `}><div class={`
           ${align === 'center' ? 'justify-center text-center' : ''}          
           pt-8     

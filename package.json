@@ -27,6 +27,7 @@
     "@mui/material": "^5.11.10",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
+    "docusaurus-plugin-drawio": "^0.4.0",
     "docusaurus-plugin-image-zoom": "^0.1.1",
     "docusaurus-plugin-matomo": "^0.0.6",
     "docusaurus-plugin-openapi-docs": "^2.0.2",
