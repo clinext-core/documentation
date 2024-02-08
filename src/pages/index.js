@@ -10,7 +10,7 @@ import HomepageFeatures2 from '../components/project/homepageFeatures2'
 // import HomepageFeatures3 from '../components/project/homepageFeatures3'
 // import HomepageFeatures4 from '../components/project/homepageFeatures4'
 // import EverythingIsAFeature from '../components/project/everythingIsAFeature'
-// import Pollination from '../components/project/pollination'
+import Pollination from '../components/project/pollination'
 // import FeaturesSample from '../components/domain/featuresSample'
 import Manifest from '../components/project/manifest'
 // import Definitions from '../components/project/definitions'
@@ -26,7 +26,7 @@ export default () => {
       <main className='pb-16'>
         
         <Framework />
-        {/* <Pollination />         */}
+        <Pollination />        
         <HomepageFeatures2 />
         {/* <Definitions align={'left'}/> */}
         <Manifest  align={'left'}/>  

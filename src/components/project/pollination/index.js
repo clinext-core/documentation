@@ -7,11 +7,10 @@ export default () => {
   const { siteConfig } = useDocusaurusContext()
   return <div className={`             
         `}>
-    <div class={`
-        
+    <div class={`        
         px-6
         md:px-6      
-        pt-6`}>
+        pt-0`}>
       <div class={`
           text-right
           flex
@@ -38,16 +37,16 @@ export default () => {
           max-w-4xl
         `}>
           <h2 className='text-4xl'>
-            {`Ok, what would the perfect CLI generator look like ? 🤖`} <i></i>
+            {`We don't want to spend too much time on the CLI either 🤖`}
           </h2>
           <p className={`text-lg `}>
-            CliNext is not a traditional Node JS framework as it does not expose any api or route by itself, nor does it contain any server capacity. Instead it pollinates database tables (models) with features (independent and agnostic feature oriented extensions) so that a traditional Node JS framework (adapted by a framework engine) can use them.
+            CliNext is built from the ground up to be easy to use, convention driven and extensible so that it's easy to kickstart a project and maintain it. It's api makes it easy to fetch steps remotely and execute them with powerful side effects, transformers and validators.
           </p>
           <p>
             <Link
               className="button button--secondary button--md"
-              to="/docs/concepts/architecture/components">
-              Learn more about pollination framework
+              to="/docs/concepts/motivation">
+              Learn more about CliNext motivation
             </Link>
           </p>
           {/* <div className={``}>
