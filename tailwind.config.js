@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,6 +10,21 @@ module.exports = {
   darkMode: ['class', '[data-theme="dark"]'], // hooks into docusaurus' dark mode settigns
   theme: {
     extend: {},
+    colors: {   
+      ...colors,
+      'customc-main': '#e76f51',
+      'customc-second': '#faf3dd'
+    },
   },
   plugins: [],
+  variants: {
+    extend: {
+      borderColor: ['focus-visible'],
+      opacity: ['disabled'],
+      display: ["group-hover"],
+    }
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

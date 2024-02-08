@@ -2,30 +2,57 @@
 sidebar_position: 2
 ---
 
-import Table from '@site/src/components/generic/table'
+import Table from '@site/src/components/generic/reference/table'
 
 # Option
 
 <Table data={{
     header: {
-        columns: ["Parameter", "Type", "Default value", "Mandatory"] 
+        columns: [
+            "Parameter", 
+            "Type", 
+            "Description", 
+            "Default value", 
+            "Mandatory"
+            ] 
     },
     rows: 
-    [{
-        id: "d",
-        columns: ["name", "string", "b", true]        
-    },
-    {
-        id: "b",
-        columns: ["message", "string", "b", false]        
-    },
-    {
-        id: "b",
-        columns: ["type", "string", "b", false]        
-    },
-    {
-        id: "b",
-        columns: ["prompType", "string", "b", false]        
-    },
-    ]
+    [
+        {
+            id: "d",
+            columns: [
+                "name", 
+                "string", 
+                "Designated URL or path to the source of an OpenAPI specification file or directory of multiple OpenAPI specification files.", 
+                "b", 
+                {
+                    type: 'boolean',
+                    value: true
+                }]        
+        },
+        {
+            id: "d",
+            columns: [
+                "name", 
+                "string", 
+                "Designated URL or path to the source of an OpenAPI specification file or directory of multiple OpenAPI specification files.", 
+                "b", 
+                {
+                    type: 'boolean',
+                    value: true
+                }]        
+        },
+        {
+            id: "b",
+            columns: ["message", "string","Designated URL or path to the source of an OpenAPI specification file or directory of multiple OpenAPI specification files.", "b", false]        
+        },
+        {
+            id: "b",
+            columns: ["type", "string", "Designated URL or path to the source of an OpenAPI specification file or directory of multiple OpenAPI specification files.","b", false]        
+        },
+        {
+            id: "b",
+            columns: ["prompType", "string", "Designated URL or path to the source of an OpenAPI specification file or directory of multiple OpenAPI specification files.","b", false]        
+        },
+        ]
 }} />

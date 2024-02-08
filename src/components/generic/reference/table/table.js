@@ -8,7 +8,7 @@ export default (props) => {
      <thead>
      {      
         header.columns.map(column => {
-          return (<td key={column} className='font-bold'> {column} </td>)
+          return (<td key={column} className='font-bold text-center'> {column} </td>)
         })            
      }
     </thead>
@@ -18,7 +18,10 @@ export default (props) => {
         return <tr key={row.id}>
             {
              row.columns.map(column => {
-                return (<td key={column}> {column} </td>)
+            //  return <i>{column.value}</i>
+                return <td key={column.id} className=''> 
+                  {column.value} 
+                </td>
              })
             }
           </tr>
