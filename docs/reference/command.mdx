@@ -13,8 +13,7 @@ import Table from '@site/src/components/generic/reference/table'
 
 ## Arguments
 
-<Table
-    isJson
+<Table    
     types = {{
         rootPath: '',
         items: [{
@@ -112,7 +111,11 @@ import Table from '@site/src/components/generic/reference/table'
             },
             {
                 parameter: "transformer", 
-                type: "object", 
+                type: {
+                    type: 'type',
+                    value: "transformer",
+                    mode: "array"
+                }, 
                 description: "A combination of display, in and out transformers to apply to an input or value.", 
                 defaultValue: "",
                 mandatory:{
@@ -126,6 +129,7 @@ import Table from '@site/src/components/generic/reference/table'
 ## Archive
 
 <Table
+isPlain
 types = {{
     rootPath: '',
     items: [{

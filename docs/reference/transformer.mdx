@@ -1,7 +1,223 @@
 ---
-sidebar_position: 2
+sidebar_position: 0
 ---
+
+import Table from '@site/src/components/generic/reference/table'
 
 # Transformer
 
-![logo](/img/noun-change-1069929.svg)
+## Overview
+
+### Path
+- A transformer is declared by adding a file to the src/transformers corresponding subfolder
+
+### Data structure
+- A transformer can either be a display, in or out
+- The <i>transformers</i> entry holds the information for these three types of transformation
+- A display, in or out is an array of transformers
+- The transformers will be called sequentially as per their order in the array
+```js
+ transformers: {
+    display: ["capitalizeFirstLetter"],
+    in: ["capitalizeFirstLetter"]
+    out: ["capitalizeFirstLetter"]
+  }
+```
+
+#### In
+An In transformer is applied to a value before it is presented to the inquirer.
+#### Out
+An Out transformer is applied to a value after it is presented to the inquirer and filled by the user.
+#### Display
+A Display transformer is applied to a value only for display formatting.
+
+
+
+## Types of Transformers
+You can declare a transformer in three different ways
+
+### Pre-Declared
+The transformer has already been declared in the form of 
+#### Quick configuration
+You can pass the id of the transformer in the <i>out</i> section of the <i>transformers</i> section.
+
+<i>Example</i>
+
+```js
+ transformers: {
+    out: ['myOutTransformerId']
+  }
+```
+
+#### Advanced
+<Table    
+    types = {{}}
+    data={{
+        header: {
+            columns: [
+                {
+                    id: "parameter",
+                    label:"Parameter", 
+                },
+                {
+                    id: "type",
+                    label:"Type", 
+                },
+                {
+                    id: "description",
+                    label:"Description", 
+                },
+                {
+                    id: "defaultValue",
+                    label:"Default value", 
+                },
+                {
+                    id: "mandatory",
+                    label:"Mandatory", 
+                },] 
+        },
+        rows: 
+        [
+            {
+                parameter: "id", 
+                type: "string", 
+                description: "Transformer id", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: true
+                }
+            },
+            {            
+                parameter: "params", 
+                type: "object", 
+                description: "Transformer payload", 
+                defaultValue: "{}",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                }
+            },]
+    }} />
+
+
+
+### Inline
+
+<Table    
+    types = {{}}
+    data={{
+        header: {
+            columns: [
+                {
+                    id: "parameter",
+                    label:"Parameter", 
+                },
+                {
+                    id: "type",
+                    label:"Type", 
+                },
+                {
+                    id: "description",
+                    label:"Description", 
+                },
+                {
+                    id: "defaultValue",
+                    label:"Default value", 
+                },
+                {
+                    id: "mandatory",
+                    label:"Mandatory", 
+                },] 
+        },
+        rows: 
+        [
+            {
+                parameter: "id", 
+                type: "string", 
+                description: "Transformer id", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: true
+                }
+            },
+            {            
+                parameter: "params", 
+                type: "object", 
+                description: "Transformer payload", 
+                defaultValue: "{}",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                }
+            },]
+    }} />
+
+<i>Example</i>
+
+```js
+ transformers: {
+    out: ['myOutTransformerId']
+  }
+```
+
+### Template
+
+<Table    
+    types = {{}}
+    data={{
+        header: {
+            columns: [
+                {
+                    id: "parameter",
+                    label:"Parameter", 
+                },
+                {
+                    id: "type",
+                    label:"Type", 
+                },
+                {
+                    id: "description",
+                    label:"Description", 
+                },
+                {
+                    id: "defaultValue",
+                    label:"Default value", 
+                },
+                {
+                    id: "mandatory",
+                    label:"Mandatory", 
+                },] 
+        },
+        rows: 
+        [
+            {
+                parameter: "id", 
+                type: "string", 
+                description: "Transformer id", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: true
+                }
+            },
+            {            
+                parameter: "params", 
+                type: "object", 
+                description: "Transformer payload", 
+                defaultValue: "{}",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                }
+            },]
+    }} />
+
+<i>Example</i>
+
+```js
+ transformers: {
+    out: ['myOutTransformerId']
+  }
+```

@@ -6,7 +6,7 @@ export default (props) => {
   const data = adaptData({
     data: props.data,
     types: props.types,
-    isJson: props.isJson
+    isPlain: props.isPlain
   })
   return <Table {...props} data={data} />     
 }
