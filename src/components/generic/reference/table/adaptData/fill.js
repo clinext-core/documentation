@@ -35,6 +35,12 @@ export default  ({data, types}) => {
                   value:  <Badge name={column.value ? "True": "False" } />
                 }
               }
+              case 'values':{
+                return {
+                  id: columnIndex,
+                  value: column.value.map(v => <Badge name={v} />)
+                }
+              }
               case 'element':{
                 const Element = column.value
                 return {
