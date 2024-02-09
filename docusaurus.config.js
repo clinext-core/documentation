@@ -190,6 +190,12 @@ const config = {
             position: 'right',
             label: 'Reference',
           },
+          {
+            type: 'doc',
+            docId: 'faq',
+            position: 'right',
+            label: 'FAQ 💡',
+          },
           // {
           //   type: 'doc',
           //   docId: 'commands/install',
