@@ -1,17 +1,18 @@
 ---
-sidebar_position: 0
+sidebar_position: 3
 ---
 
 import ReferenceTable from '@site/src/components/generic/reference/table'
 
 # Transformer
 
-## Data structure
+## Data structure & behavior
 - A transformer can either be a display, in or out
 - The <i>transformers</i> entry holds the information for these three types of transformation
 - A display, in or out is an array of transformers
 - The transformers will be called sequentially as per their order in the array
 
+Example
 ```js
  transformers: {
     display: ["capitalizeFirstLetter"],

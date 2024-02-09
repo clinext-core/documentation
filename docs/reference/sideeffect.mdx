@@ -1,12 +1,16 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 import ReferenceTable from '@site/src/components/generic/reference/table'
 
 # Side Effect
 
-A side effect can be used at any step to change an object (usually the CliNext payload) as a side effect of the step itself.
+## Data structure & behavior
+- A side effect can be used at any step to change an object (usually the CliNext payload) as a side effect of the step itself.
+- A side effect can be applied following a template
+- A side effect can be applied barring conditions 
+- The side effects will be called sequentially as per their order in the array
 
 Example
 ```json
@@ -27,35 +31,9 @@ Example
 ]
 ```
 
-## Data structure
-- A transformer can either be a display, in or out
-- The <i>transformers</i> entry holds the information for these three types of transformation
-- A display, in or out is an array of transformers
-- The transformers will be called sequentially as per their order in the array
-
-```js
- transformers: {
-    display: ["capitalizeFirstLetter"],
-    in: ["capitalizeFirstLetter"]
-    out: [
-        "capitalizeFirstLetter",
-        {
-          template: `<%= destination %>/<%= featureId %>`
-        }
-    ]
-  }
-```
-
-#### In
-An In transformer is applied to a value before it is presented to the inquirer.
-#### Out
-An Out transformer is applied to a value after it is presented to the inquirer and filled by the user.
-#### Display
-A Display transformer is applied to a value only for display formatting.
-
 
 ## Create a side effect
-Create a project wide side effect in the form of a _cliNext file in <b>src/sideeffects</b>.
+Create a project-wide side effect in the form of a _cliNext file in <b>src/sideeffects</b>.
 
 <ReferenceTable    
     types = {{}}
@@ -150,7 +128,6 @@ Create a project wide side effect in the form of a _cliNext file in <b>src/sidee
     }} />
 
 ## Use
-You can declare a transformer in three different ways
 
 ### File based
 
@@ -158,23 +135,17 @@ You can declare a transformer in three different ways
 You can pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
 
 ```js
- transformers: {
-    out: ['myOutTransformerId']
-  }
+ sideeffects: ["mysideeffect"]
 ```
 
 ** Advanced **
 You can pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
 
 ```js
- transformers: {
-    display: [{
-      id: 'myDisplayTransformerId',
-      params: {
-        myParam1: true
-      }
-    }]
-  }
+ sideeffects: [{
+    id: "mySideEffect",
+    params: {}
+ }]
 ```
 
 <ReferenceTable    
@@ -229,14 +200,7 @@ You can pass the id of the transformer in the corresponding section of the <i>tr
 
 Example
 ```js
- transformers: {
-    display: [{
-      id: 'isFolderEmpty',
-      params: {
-        excludeHiddenFiles: true
-      }
-    }]
-  }
+
 ```
 
 ### Inline
