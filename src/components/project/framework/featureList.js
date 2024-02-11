@@ -22,6 +22,7 @@ export default [
   {
     title: 'All declarative transformers and validators',
     Svg: require('@site/static/img/noun-release-5004142.svg').default,
+    // Svg: require('@site/static/img/noun-settings-1269041.svg').default,
     description: (
       <>
         Every aspect of a command parameters can be declared easily via input and output transformers, an input validators.
