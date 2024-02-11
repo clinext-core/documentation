@@ -13,6 +13,7 @@ import HomepageFeatures2 from '../components/project/homepageFeatures2'
 import Pollination from '../components/project/pollination'
 // import FeaturesSample from '../components/domain/featuresSample'
 import Manifest from '../components/project/manifest'
+import Questions from '../components/project/questions'
 // import Definitions from '../components/project/definitions'
 
 export default () => {
@@ -26,9 +27,10 @@ export default () => {
       <main className='pb-16'>
         
         <Framework />
-        <Pollination />        
+        <Questions />
         <HomepageFeatures2 />
         {/* <Definitions align={'left'}/> */}
+        <Pollination />  
         <Manifest  align={'left'}/>  
              
         {/* <FeaturesSample /> */}

@@ -3,7 +3,8 @@ import React from 'react';
 export default [
   {
     title: 'Commands ready',
-    Svg: require('@site/static/img/noun-build-3738502.svg').default,
+    // Svg: require('@site/static/img/noun-build-3738502.svg').default,
+    Svg: require('@site/static/img/noun-command-3158391.svg').default,    
     description: (
       <>
         CliNext makes it easy to add a command by creating a folder and adding its subcommands. 
@@ -11,8 +12,9 @@ export default [
     ),
   },
   {
-    title: 'Questions simplified',
-    Svg: require('@site/static/img/noun-question-3323941.svg').default,
+    title: 'Questions driven',
+    Svg: require('@site/static/img/noun-question-106348.svg').default,
+    // Svg: require('@site/static/img/noun-question-3323941.svg').default,
     description: (
       <>
         Options can be defined at a global level and inherited at a command level to promote reuse.
@@ -20,8 +22,10 @@ export default [
     ),
   },
   {
-    title: 'All declarative transformers and validators',
-    Svg: require('@site/static/img/noun-release-5004142.svg').default,
+    // title: 'All declarative transformers and validators',
+    title: 'Extensions',
+    // Svg: require('@site/static/img/noun-release-5004142.svg').default,
+    Svg: require('@site/static/img/noun-add-1519374.svg').default,    
     // Svg: require('@site/static/img/noun-settings-1269041.svg').default,
     description: (
       <>
