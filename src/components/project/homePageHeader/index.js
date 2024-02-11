@@ -38,11 +38,18 @@ export default () => {
             {`${siteConfig.title}`} <i className='text-gray-600 dark:text-gray-400'> framework</i>
           </h1>
           <p className={`text-lg `}>
-          An opinionated <b>Node JS</b> CLI framework to help you build modern CLIs. Get ready to change the way you code your CLI! 🚀
+          An open source opinionated <b>Node JS</b> CLI framework to help you build modern CLIs. Get ready to change the way you code your CLI! 🚀
           </p>
-          <div className={`grid grid-cols-2 space-x-6`}>
+          <div className={`
+            grid 
+            grid-cols-2 
+            space-x-6
+          `}>
             <Link
-              className="button button--primary button--lg"
+              className={`
+                button 
+                button--primary 
+                button--lg`}
               to="/docs/quickStart">
               Quick Start
             </Link>

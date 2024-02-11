@@ -33,14 +33,10 @@ export default () => {
         {/* <Definitions align={'left'}/> */}
         <Pollination />  
         <Manifest  align={'left'}/>  
-             
-        {/* <FeaturesSample /> */}
-       
-        
+        {/* <FeaturesSample /> */}        
         {/* <EverythingIsAFeature /> */}
         {/* <HomepageFeatures />
-        <HomepageFeatures2 /> */}
-        
+        {/* <HomepageFeatures2 /> */}
         {/* <HomepageFeatures3 /> */}
         {/* <ExtremeRefactoring /> */}
         {/* <HomepageFeatures4 /> */}
