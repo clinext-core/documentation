@@ -234,12 +234,18 @@
 Local search
 https://github.com/cmfcmf/docusaurus-search-local 
 https://github.com/cmfcmf/docusaurus-search-local/issues/107#issuecomment-1119831938
+https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
 */
 :root {
   --aa-primary-color-rgb: 0, 0, 0 !important;
-  --aa-muted-color-rgb: 0, 0, 0 !important;
+  --aa-muted-color-rgb: 0, 0, 0 !important;  
   /* ... */
 }
+
+.aa-DetachedSearchButtonPlaceholder {
+  padding-right: 15px;
+}
+
 [data-theme='dark'] {
   --aa-primary-color-rgb: 255, 255, 255 !important;
   --aa-muted-color-rgb: 255, 255, 255 !important;

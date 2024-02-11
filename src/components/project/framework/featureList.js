@@ -11,8 +11,8 @@ export default [
     ),
   },
   {
-    title: 'Options simplified',
-    Svg: require('@site/static/img/noun-settings-1269041.svg').default,
+    title: 'Questions simplified',
+    Svg: require('@site/static/img/noun-question-3323941.svg').default,
     description: (
       <>
         Options can be defined at a global level and inherited at a command level to promote reuse.
