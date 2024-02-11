@@ -79,7 +79,8 @@ const config = {
   },
   themes: [
     '@docusaurus/theme-mermaid',
-    "docusaurus-theme-openapi-docs"
+    "docusaurus-theme-openapi-docs",
+    "docusaurus-json-schema-plugin" //https://jy95.github.io/docusaurus-json-schema-plugin/docs/quick-start
   ],
   
   // Even if you don't use internalization, you can use this field to set useful
