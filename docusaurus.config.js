@@ -175,7 +175,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'guides/overview',
+            docId: 'guides/gettingstarted',
             position: 'right',
             label: 'Guides',
           },
