@@ -229,3 +229,19 @@
     @apply visible z-50
   }
 }
+
+/* 
+Local search
+https://github.com/cmfcmf/docusaurus-search-local 
+https://github.com/cmfcmf/docusaurus-search-local/issues/107#issuecomment-1119831938
+*/
+:root {
+  --aa-primary-color-rgb: 0, 0, 0 !important;
+  --aa-muted-color-rgb: 0, 0, 0 !important;
+  /* ... */
+}
+[data-theme='dark'] {
+  --aa-primary-color-rgb: 255, 255, 255 !important;
+  --aa-muted-color-rgb: 255, 255, 255 !important;
+  /* ... */
+}
