@@ -40,7 +40,7 @@ export default () => {
             {`Ask smart questions 🙋‍♀️`}
           </h2>
           <p className={`text-lg `}>
-            Every command can be given questions with powerful side effects, transformers and validators. CliNext automatically extracts options from questions to build the CLI helper.
+            Every command can be given questions with powerful side effects, transformers and validators. Furthermore CliNext automatically extracts options from questions to build the CLI helper.
           </p>
           <p>
             <Link
