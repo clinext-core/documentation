@@ -14,8 +14,11 @@ export default () => {
           max-w-xl
         `}>
       <h2 className='text-4xl'>{`Quick start`}</h2>
+      <p className={`text-lg`}>
+            Create a CliNext project ready to use:
+          </p>
       <p className={``}>
-        <BashTabs npm={`npx clinext new --quick\nnpm run start`} />
+        <BashTabs npm={`npx clinext new`} />
       </p>
     </div>
   </div>

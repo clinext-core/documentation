@@ -27,6 +27,7 @@ export default () => {
       <main className='pb-16'>
         
         <Framework />
+        <Sample />
         <Questions />
         <HomepageFeatures2 />
         {/* <Definitions align={'left'}/> */}
@@ -46,7 +47,7 @@ export default () => {
         {/* <Featureed /> */}
         <br />
         <br />        
-        <Sample />
+     
         {/* <SponsorUs /> */}
       </main>
     </Layout>
