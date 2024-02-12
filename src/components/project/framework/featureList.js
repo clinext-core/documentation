@@ -23,7 +23,7 @@ export default [
   },
   {
     // title: 'All declarative transformers and validators',
-    title: 'Extendable',
+    title: 'Extensible',
     // Svg: require('@site/static/img/noun-release-5004142.svg').default,
     Svg: require('@site/static/img/noun-add-1519374.svg').default,    
     // Svg: require('@site/static/img/noun-settings-1269041.svg').default,

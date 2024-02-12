@@ -5,7 +5,7 @@ export default ({ Svg, title, description }) => {
   const { isDarkTheme } = useColorMode()
 
   return (
-    <div className={'col mb-16 md:mb-0'}>
+    <div className={'col mb-16 md:mb-0 px-10'}>
       <div className="text-center ">
         <Svg
           fill={`${isDarkTheme ? 'white' : 'black'}`}
