@@ -10,7 +10,7 @@ export default () => {
         `}>
     <div class={`
         md:mt-16
-        md:mb-16
+        md:mb-2
         px-6
         md:px-6      
         py-4`}>
