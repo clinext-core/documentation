@@ -16,17 +16,17 @@ Example
 ```json
 "sideEffects": [
     {
-    "position": "after",
-    "type": "payload",
-    "name": "databaseURI",
-    "template": "mongodb://root:DATABASE_PASSWORD_TO_CHANGE@localhost:<%= appDatabasePort %>/app?authSource=admin&readPreference=primary&ssl=false",
-    "conditions": [
-        {
-            "name": "appDatabaseType",
-            "operator": "=",
-            "operand": "mongodb"
-        }
-    ]
+        "position": "after",
+        "type": "payload",
+        "name": "databaseURI",
+        "template": "mongodb://root:DATABASE_PASSWORD_TO_CHANGE@localhost:<%= appDatabasePort %>/app?authSource=admin&readPreference=primary&ssl=false",
+        "conditions": [
+            {
+                "name": "appDatabaseType",
+                "operator": "=",
+                "operand": "mongodb"
+            }
+        ]
     }
 ]
 ```

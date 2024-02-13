@@ -10,6 +10,7 @@ export default [
         CliNext makes it easy to add a command by creating a folder and adding its subcommands. 
       </>
     ),
+    url: '/docs/concepts'
   },
   {
     title: 'Questions driven',

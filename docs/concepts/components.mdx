@@ -17,12 +17,30 @@ A CLI will certainly make use of inquiries to the user. We call them questions, 
 [Guides](../guides/questions/create.mdx) <br />
 [Reference](../reference/question.mdx)
 
-### Validators
-As they name imply they validate input
+#### Validators
+Validators are used to check user's input for a question.
+- Validators can be declared separately in the src/validators folder
+- They can also be declared inline in reference to a question
+- Any extension can declare its validators as well
 
-### Transformers
-Just like a docker image is made to be### Validators
-As they name imply they validate input
+[Guides](../guides/questions/create.mdx) <br />
+[Reference](../reference/question.mdx)
 
-### Side effects
+#### Transformers
+Transformers are used to format a value before or after a user's input. They can also be used to format the data displayed to a user without having an actual effect on the final input.
+- Transformers can be declared separately in the src/validators folder
+- They can also be declared inline in reference to a question
+- Any extension can declare its transformers as well
+
+[Guides](../guides/questions/create.mdx) <br />
+[Reference](../reference/question.mdx)
+
+#### Side effects
+Side effects are used to format a value before or after a user's input. They can also be used to format the data displayed to a user without having an actual effect on the final input.
+- Side effects can be declared separately in the src/validators folder
+- They can also be declared inline in reference to a question
+- Any extension can declare its side effects as well
+
+[Guides](../guides/questions/create.mdx) <br />
+[Reference](../reference/question.mdx)
 

@@ -196,7 +196,7 @@ const config = {
             type: 'doc',
             docId: 'faq',
             position: 'right',
-            label: 'FAQ 💡',
+            label: 'FAQ',
           },
           // {
           //   type: 'doc',
