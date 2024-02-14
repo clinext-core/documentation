@@ -110,7 +110,35 @@ import Table from '@site/src/components/generic/reference/table'
                 }
             },
             {
-                parameter: "transformer", 
+                parameter: "transformers", 
+                type: {
+                    type: 'type',
+                    value: "transformer",
+                    mode: "array"
+                }, 
+                description: "A combination of display, in and out transformers to apply to an input or value.", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                }
+            },
+            {
+                parameter: "validators", 
+                type: {
+                    type: 'type',
+                    value: "transformer",
+                    mode: "array"
+                }, 
+                description: "A combination of display, in and out transformers to apply to an input or value.", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                }
+            },
+            {
+                parameter: "sideEffects", 
                 type: {
                     type: 'type',
                     value: "transformer",

@@ -7,25 +7,35 @@ import ReferenceTable from '@site/src/components/generic/reference/table'
 # Transformer
 
 ## Data structure & behavior
-- A transformer can either be a display, in or out
+- A transformer's mode can either be display, in or out
 - The <i>transformers</i> entry holds the information for these three types of transformation
 - A display, in or out is an array of transformers
 - The transformers will be called sequentially as per their order in the array
 
 Example
 ```js
- transformers: {
-    display: ["capitalizeFirstLetter"],
-    in: ["capitalizeFirstLetter"]
-    out: [
-        "capitalizeFirstLetter",
-        {
-          template: `<%= destination %>/<%= featureId %>`
+transformers: [
+    {
+        modes: ['in', 'display'],
+        id: "capitalizeFirstLetter",
+    },
+    {
+        modes: ['in', 'display'],
+        handler: ({ input }) => {
+            if(!input) {
+                return ""
+            }
+            return `{${input}}`
         }
-    ]
-  }
-```
+    },
+    {
+        modes: ['out'],
+        template: `<%= destination %>/<%= featureId %>`
+    }
+]
 
+```
+### Modes
 #### In
 An In transformer is applied to a value before it is presented to the inquirer.
 #### Out
@@ -86,21 +96,7 @@ Create a project wide transformer in the form of a _cliNext file in <b>src/trans
                     type: 'values',
                     value: ['transformer']
                 },
-            },
-            {
-                parameter: "position", 
-                type: "string", 
-                description: "The type of transformer. Can be in, out or display", 
-                defaultValue: "transformer",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                },
-                acceptedValues: {
-                    type: 'values',
-                    value: ['in', 'out', 'display']
-                },
-            },
+            },            
             {
                 parameter: "id", 
                 type: "string", 
@@ -110,6 +106,20 @@ Create a project wide transformer in the form of a _cliNext file in <b>src/trans
                     type: 'boolean',
                     value: true
                 }
+            },
+            {            
+                parameter: "modes", 
+                type: "array", 
+                description: "Transformers modes", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: true
+                },    
+                acceptedValues: {
+                    type: 'values',
+                    value: ['in', 'out', 'display']
+                },        
             },
             {            
                 parameter: "handler", 
@@ -122,11 +132,23 @@ Create a project wide transformer in the form of a _cliNext file in <b>src/trans
                 },                
                 example: {
                     type: 'element',
-                    value: () => <bloc>{`handler: async ({ input, }) => {
+                    value: () => <block>{`handler: async ({ input, }) => {
                         return capitalizeFirstLetter(input)
-                    }`}</bloc>
+                    }`}</block>
                 },
-            },]
+            }, 
+            {            
+                parameter: "template", 
+                type: "string", 
+                description: "A template to render with CliNext payload data.", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: false
+                },                
+                example: `<%= destination %>/<%= extensionId %>`
+            },            
+            ]
     }} />
 
 ## Use
@@ -134,27 +156,17 @@ You can declare a transformer in three different ways
 
 ### File based
 
-**Quick configuration**
-You can pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
+Pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
 
 ```js
- transformers: {
-    out: ['myOutTransformerId']
-  }
-```
-
-** Advanced **
-You can pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
-
-```js
- transformers: {
-    display: [{
+ transformers: [
+   {
       id: 'myDisplayTransformerId',
       params: {
         myParam1: true
       }
-    }]
-  }
+    }
+  ]
 ```
 
 <ReferenceTable    
@@ -203,6 +215,16 @@ You can pass the id of the transformer in the corresponding section of the <i>tr
                 mandatory:{
                     type: 'boolean',
                     value: false
+                }
+            },
+            {            
+                parameter: "modes", 
+                type: "array", 
+                description: "Transformers modes", 
+                defaultValue: "",
+                mandatory:{
+                    type: 'boolean',
+                    value: true
                 }
             },]
     }} />
