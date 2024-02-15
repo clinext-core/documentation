@@ -3,6 +3,7 @@ sidebar_position: 3
 ---
 
 import ReferenceTable from '@site/src/components/generic/reference/table'
+import JSONSchemaViewer from "@theme/JSONSchemaViewer"
 
 # Transformer
 
@@ -47,108 +48,39 @@ A Display transformer is applied to a value only for display formatting.
 ## Create
 Create a project wide transformer in the form of a _cliNext file in <b>src/transformers/{in|out|display}</b>.
 
-<ReferenceTable    
-    types = {{}}
-    data={{
-        header: {
-            columns: [
-                {
-                    id: "parameter",
-                    label:"Parameter", 
-                },
-                {
-                    id: "type",
-                    label:"Type", 
-                },
-                {
-                    id: "description",
-                    label:"Description", 
-                },
-                {
-                    id: "defaultValue",
-                    label:"Default value", 
-                },
-                {
-                    id: "mandatory",
-                    label:"Mandatory", 
-                },
-                {
-                    id: "acceptedValues",
-                    label:"Accepted values", 
-                },
-                {
-                    id: "example",
-                    label:"Example", 
-                },] 
-        },
-        rows: 
-        [
-            {
-                parameter: "_clinextType", 
-                type: "string", 
-                description: "CliNext module type", 
-                defaultValue: "transformer",
-                mandatory: {
-                    type: 'boolean',
-                    value: true
-                },
-                acceptedValues: {
-                    type: 'values',
-                    value: ['transformer']
-                },
-            },            
-            {
-                parameter: "id", 
-                type: "string", 
-                description: "Transformer id", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                }
-            },
-            {            
-                parameter: "modes", 
-                type: "array", 
-                description: "Transformers modes", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                },    
-                acceptedValues: {
-                    type: 'values',
-                    value: ['in', 'out', 'display']
-                },        
-            },
-            {            
-                parameter: "handler", 
-                type: "function", 
-                description: "The handler function.", 
-                defaultValue: "{}",
-                mandatory:{
-                    type: 'boolean',
-                    value: false
-                },                
-                example: {
-                    type: 'element',
-                    value: () => <block>{`handler: async ({ input, }) => {
-                        return capitalizeFirstLetter(input)
-                    }`}</block>
-                },
-            }, 
-            {            
-                parameter: "template", 
-                type: "string", 
-                description: "A template to render with CliNext payload data.", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: false
-                },                
-                example: `<%= destination %>/<%= extensionId %>`
-            },            
-            ]
+<JSONSchemaViewer schema={{
+    	"title": "Transformer schema",
+    	"type": "object",
+        "description": "Allows for schema to be seen",
+    	"properties": {
+    		"_clinextType": {
+    			"type": "string"
+    		},
+            "id": {
+    			"type": "string",
+                "description": "Unique ID"
+    		},
+    		"modes": {
+    			"type": "array",
+                "enum":[
+                    "in",
+                    "out",
+                    "display"
+                ],
+                "description":"Transformer modes"
+    		},
+            "description": {
+    			"type": "string"
+    		},
+            "template": {
+    			"type": "string"
+    		},
+            "handler": {
+    			"type": "object",
+                "description":"Transformer modes"
+    		}
+    	},
+    	"required": ["modes",]
     }} />
 
 ## Use

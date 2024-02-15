@@ -50,7 +50,7 @@ export default () => {
                 button 
                 button--primary 
                 button--lg`}
-              to="/docs/quickStart">
+              to="/docs/gettingstarted/quickStart">
               Quick Start
             </Link>
             <Link

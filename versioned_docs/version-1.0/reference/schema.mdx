@@ -4,7 +4,7 @@ sidebar_position: 0
 
 
 import CodeBlock from '@theme/CodeBlock';
-import Schema from "@site/static/schemas/test.json";
+import schema from "@site/static/schemas/test.json";
 import JSONSchemaViewer from "@theme/JSONSchemaViewer"
 import BashTabs from '@site/src/components/generic/bashTabs'
 
@@ -14,8 +14,25 @@ import BashTabs from '@site/src/components/generic/bashTabs'
 
 # My super Schema 
 
-<JSONSchemaViewer schema={ Schema } />
+<JSONSchemaViewer schema={{
+    	"title": "Example Schema",
+    	"type": "object",
+    	"properties": {
+    		"firstName": {
+    			"type": "string"
+    		},
+    		"lastName": {
+    			"type": "string"
+    		},
+    		"age": {
+    			"description": "Age in years",
+    			"type": "integer",
+    			"minimum": 0
+    		}
+    	},
+    	"required": ["firstName", "lastName"]
+    }} />
 
 # Source :
 
-<CodeBlock language="json-schema">{JSON.stringify(Schema, null, 2)}</CodeBlock>
+<CodeBlock language="json-schema">{JSON.stringify(schema, null, 2)}</CodeBlock>
