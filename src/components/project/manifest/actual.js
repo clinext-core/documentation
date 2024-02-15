@@ -31,8 +31,8 @@ justify-center
           {!noLink && <p>
             <Link
               className="button button--secondary button--md"
-              to="/docs/concepts/motivation">
-              Read more about CliNext motivation
+              to="/docs/concepts/philosophy">
+              Read more about CliNext philosophy
             </Link>
           </p>}
         </div>

@@ -170,7 +170,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'concepts/motivation',
+            docId: 'concepts/philosophy',
             position: 'left',
             label: 'Concepts',
           },
@@ -264,7 +264,7 @@ const config = {
           //   items: [
           //     {
           //       label: 'Guides',
-          //       to: '/docs/concepts/motivation',
+          //       to: '/docs/concepts/philosophy',
           //     },
           //   ],
           // },

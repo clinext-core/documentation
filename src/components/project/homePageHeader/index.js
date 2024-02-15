@@ -55,7 +55,7 @@ export default () => {
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/concepts/motivation">
+              to="/docs/concepts/philosophy">
               Guides
             </Link>
           </div>
