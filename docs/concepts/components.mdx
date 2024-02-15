@@ -4,10 +4,10 @@ sidebar_position: 2
 
 # Terms, definitions and components
 
-### Commands
+## Commands
 Commands folders are a direct representation of the arborescence of commands the end user will see.
 
-### Questions
+## Questions
 A CLI will certainly make use of inquiries to the user. We call them questions, and they are built with certain requirements in mind:
 - Questions can be declared in a conventional way in the src/questions folder
 - Any command can declare the questions it will use, by doing so CliNext will automatically extract the cli parameters from those questions and inject them in the help view.
@@ -17,7 +17,7 @@ A CLI will certainly make use of inquiries to the user. We call them questions, 
 [Guides](../guides/questions/structure.mdx) <br />
 [Reference](../reference/question.mdx)
 
-#### Validators
+### Validators
 Validators are used to check user's input for a question.
 - Validators can be declared separately in the src/validators folder
 - They can also be declared inline in reference to a question
@@ -26,7 +26,7 @@ Validators are used to check user's input for a question.
 [Guides](../guides/questions/structure.mdx) <br />
 [Reference](../reference/question.mdx)
 
-#### Transformers
+### Transformers
 Transformers are used to format a value before or after a user's input. They can also be used to format the data displayed to a user without having an actual effect on the final input.
 - Transformers can be declared separately in the src/validators folder
 - They can also be declared inline in reference to a question
@@ -35,7 +35,7 @@ Transformers are used to format a value before or after a user's input. They can
 [Guides](../guides/questions/structure.mdx) <br />
 [Reference](../reference/question.mdx)
 
-#### Side effects
+### Side effects
 Side effects are used to format a value before or after a user's input. They can also be used to format the data displayed to a user without having an actual effect on the final input.
 - Side effects can be declared separately in the src/validators folder
 - They can also be declared inline in reference to a question
