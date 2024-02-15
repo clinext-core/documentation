@@ -166,30 +166,30 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'doc',
             docId: 'concepts/motivation',
-            position: 'right',
+            position: 'left',
             label: 'Concepts',
           },
           {
             type: 'doc',
             docId: 'guides/gettingstarted',
-            position: 'right',
+            position: 'left',
             label: 'Guides',
           },
           {
             type: 'doc',
             docId: 'tutorials/overview',
-            position: 'right',
+            position: 'left',
             label: 'Tutorials',
           },
           {
             type: 'doc',
             docId: 'reference/overview',
-            position: 'right',
+            position: 'left',
             label: 'Reference',
           },
           {
