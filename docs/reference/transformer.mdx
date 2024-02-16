@@ -20,7 +20,11 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
         "description": "Allows for schema to be seen",
     	"properties": {
     		"_clinextType": {
-    			"type": "string"
+    			"type": "string",
+                "default": "transformer",
+                "enum":[
+                    "transformer"
+                ],
     		},
             "id": {
     			"type": "string",
@@ -40,13 +44,17 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
     		},
             "template": {
     			"type": "string"
-    		},
+    		},        
+            "params": {
+    			"type": "object",                
+                "description":"Params for a previously declared transformer"
+    		},                        
             "handler": {
     			"type": "object",
-                "description":"Transformer modes"
+                "description":"Handler"
     		}
     	},
-    	"required": ["modes",]
+    	"required": ["id", "modes",]
     }} />
 
 
@@ -69,13 +77,13 @@ To use a previously declared transformer, pass its id and params if needed:
 {
     ...
     transformers: [
-    {
-        id: 'myDisplayTransformerId',
-        params: {
-            myParam1: true
+        {
+            id: 'myDisplayTransformerId',
+            params: {
+                myParam1: true
+            }
         }
-    }
-]
+    ]
 }
 ```
 
