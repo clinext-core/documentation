@@ -163,10 +163,12 @@ const config = {
           alt: 'Logo',
           src: 'img/icon.png',
         },
-        items: [
+        items: [          
           {
-            type: 'docsVersionDropdown',
-            position: 'right',
+            type: 'doc',
+            docId: 'gettingstarted/quickstart',
+            position: 'left',
+            label: 'Getting started 🚀',
           },
           {
             type: 'doc',
@@ -176,7 +178,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'gettingstarted/installation',
+            docId: 'guides/overview',
             position: 'left',
             label: 'Guides',
           },
@@ -191,6 +193,10 @@ const config = {
             docId: 'reference/overview',
             position: 'left',
             label: 'Reference',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
           },
           {
             type: 'doc',
