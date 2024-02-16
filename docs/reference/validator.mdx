@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 import ReferenceTable from '@site/src/components/generic/reference/table'
@@ -7,290 +7,94 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
 
 # Validator
 
-## Data structure & behavior
-- A transformer's mode can either be display, in or out
-- The <i>transformers</i> entry holds the information for these three types of transformation
-- A display, in or out is an array of transformers
-- The transformers will be called sequentially as per their order in the array
+- 
 
 Example
 ```js
-transformers: [
-    {
-        modes: ['in', 'display'],
-        id: "capitalizeFirstLetter",
-    },
-    {
-        modes: ['in', 'display'],
-        handler: ({ input }) => {
-            if(!input) {
-                return ""
-            }
-            return `{${input}}`
-        }
-    },
-    {
-        modes: ['out'],
-        template: `<%= destination %>/<%= featureId %>`
-    }
-]
-
+{
+    name: 'appPath',
+    message: "App to add a feature to",
+    validators: [{ 
+        id: 'nonempty' 
+    }]
+},
 ```
-### Modes
-#### In
-An In transformer is applied to a value before it is presented to the inquirer.
-#### Out
-An Out transformer is applied to a value after it is presented to the inquirer and filled by the user.
-#### Display
-A Display transformer is applied to a value only for display formatting.
-
 
 ## Create
-Create a project wide transformer in the form of a _cliNext file in <b>src/transformers/{in|out|display}</b>.
+Create a project wide question in the form of a _cliNext file in <b>src/questions/</b>.
 
 <JSONSchemaViewer schema={{
-    	"title": "Transformer schema",
+    	"title": "Question",
     	"type": "object",
         "description": "Allows for schema to be seen",
     	"properties": {
     		"_clinextType": {
-    			"type": "string"
+    			"type": "string",
+                "default": "question",
+                "enum": [
+                    "question",
+                ],
     		},
-            "id": {
+            "name": {
     			"type": "string",
                 "description": "Unique ID"
     		},
-    		"modes": {
-    			"type": "array",
-                "enum":[
-                    "in",
-                    "out",
-                    "display"
-                ],
-                "description":"Transformer modes"
-    		},
             "description": {
-    			"type": "string"
+    			"type": "string",
+                "description": "Command description"
     		},
-            "template": {
-    			"type": "string"
+            "validators": {
+    			"type": "array",                
+                "description":"Validators"
     		},
-            "handler": {
-    			"type": "object",
-                "description":"Transformer modes"
-    		}
+            "transformers": {
+    			"type": "array",                
+                "description":"Transformers"
+    		},
+    		"sideEffects": {
+    			"type": "array",                
+                "description":"Side effects"
+    		},            
     	},
-    	"required": ["modes",]
-    }} />
+    	"required": ["name",]
+    }} 
+/>
 
-## Use
-You can declare a transformer in three different ways
+## Usage
 
-### File based
+You can pass the name of the transformer in a command <i>questions</i>.
 
-Pass the id of the transformer in the corresponding section of the <i>transformers</i> section.
-
+**Command**
 ```js
- transformers: [
-   {
-      id: 'myDisplayTransformerId',
-      params: {
-        myParam1: true
-      }
-    }
-  ]
+export default ({
+    _clinextType: "command",
+    name: 'schema',
+    description: 'Generate schema documentation 🐝',
+    questions: [
+    {
+        name: 'appPath',
+        message: "App to add a feature to",
+        validators: [{ id: 'nonempty' }]
+    },
+]
+})
 ```
 
-<ReferenceTable    
-    types = {{}}
-    data={{
-        header: {
-            columns: [
-                {
-                    id: "parameter",
-                    label:"Parameter", 
-                },
-                {
-                    id: "type",
-                    label:"Type", 
-                },
-                {
-                    id: "description",
-                    label:"Description", 
-                },
-                {
-                    id: "defaultValue",
-                    label:"Default value", 
-                },
-                {
-                    id: "mandatory",
-                    label:"Mandatory", 
-                },] 
-        },
-        rows: 
-        [
-            {
-                parameter: "id", 
-                type: "string", 
-                description: "Transformer id", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                }
-            },
-            {            
-                parameter: "params", 
-                type: "object", 
-                description: "Transformer payload", 
-                defaultValue: "{}",
-                mandatory:{
-                    type: 'boolean',
-                    value: false
-                }
-            },
-            {            
-                parameter: "modes", 
-                type: "array", 
-                description: "Transformers modes", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                }
-            },]
-    }} />
-
-Example
+**CliNext.prompt.ask**
 ```js
- transformers: {
-    display: [{
-      id: 'isFolderEmpty',
-      params: {
-        excludeHiddenFiles: true
-      }
-    }]
-  }
+await CliNext.prompt.ask([
+    {        
+        name: 'appPath',
+        message: "App to add a feature to",
+        validators: [{ id: 'nonempty' }]        
+    },
+])
 ```
 
-### Inline
-
-<ReferenceTable    
-    types = {{}}
-    data={{
-        header: {
-            columns: [
-                {
-                    id: "parameter",
-                    label:"Parameter", 
-                },
-                {
-                    id: "type",
-                    label:"Type", 
-                },
-                {
-                    id: "description",
-                    label:"Description", 
-                },
-                {
-                    id: "defaultValue",
-                    label:"Default value", 
-                },
-                {
-                    id: "mandatory",
-                    label:"Mandatory", 
-                },] 
-        },
-        rows: 
-        [
-            {
-                parameter: "id", 
-                type: "string", 
-                description: "Transformer id", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                }
-            },
-            {            
-                parameter: "params", 
-                type: "object", 
-                description: "Transformer payload", 
-                defaultValue: "{}",
-                mandatory:{
-                    type: 'boolean',
-                    value: false
-                }
-            },]
-    }} />
-
-<i>Example</i>
-
-```js
- transformers: {
-    out: ['myOutTransformerId']
-  }
-```
-
-### Template
-
-<ReferenceTable    
-    types = {{}}
-    data={{
-        header: {
-            columns: [
-                {
-                    id: "parameter",
-                    label:"Parameter", 
-                },
-                {
-                    id: "type",
-                    label:"Type", 
-                },
-                {
-                    id: "description",
-                    label:"Description", 
-                },
-                {
-                    id: "defaultValue",
-                    label:"Default value", 
-                },
-                {
-                    id: "mandatory",
-                    label:"Mandatory", 
-                },] 
-        },
-        rows: 
-        [
-            {
-                parameter: "id", 
-                type: "string", 
-                description: "Transformer id", 
-                defaultValue: "",
-                mandatory:{
-                    type: 'boolean',
-                    value: true
-                }
-            },
-            {            
-                parameter: "params", 
-                type: "object", 
-                description: "Transformer payload", 
-                defaultValue: "{}",
-                mandatory:{
-                    type: 'boolean',
-                    value: false
-                }
-            },]
-    }} />
-
-<i>Example</i>
-
-```js
-transformers: {
-    out: [{
-        template: `<%= destination %>/<%= featureId %>`
-    }]
-}
-```
+- To inherit a question the only required argument is ```name```. The rest of the arguments will be inherited.
+- Order of precedence: **CliNext.prompt.ask** > **command** > **src/questions**
+- A **CliNext.prompt.ask** question inherits a matching **command** question if there's any
+- If there's no matching **command** question, **CliNext.prompt.ask** question inherits a matching **src/questions** question if there's any
+- A **command** question inherits a **src/questions** question if there's any
+- A **CliNext.prompt.ask** question inherits a **command** question
+- A question defined by **Command** takes precedence over a question defined in **Command**
