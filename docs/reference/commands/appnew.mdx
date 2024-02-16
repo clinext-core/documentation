@@ -1,33 +1,31 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# $ clinext app
+# $ clinext app new
 
 ## Create a new app
 Creates a new clinext app and installs dependencies.
 ```bash
-clinext new
+clinext app new
 ```
 
 ### Options
 ```bash
   -n, --appName              App name                                                      [string] [default: "MyAppName"]
-      --appDescription       App description                                          [string] [default: "A CliNext app"]
-      --bridgeframeworkId    Engine to use                  [string] [default: "@clinext/parse-server-engine"]
+      --appDescription       App description                                          [string] [default: "A CliNext app"]      
   -i, --installDependencies  Install dependencies                                                [boolean] [default: true]
   -l, --license              License                                                             [string] [default: "MIT"]
   -p, --packageManager       Package manager ('npm', 'yarn' or 'pnpm')                           [string] [default: "npm"]
   -g, --gitInit              Initialize a git repository                                         [boolean] [default: true]
-  -d, --destination          Choose a destination                                                                 [string]
-      --appPort              App port                                                             [number] [default: 1387]  
+  -d, --destination          Project destination                                                                 [string]      
 ```
 ### Example
 ```bash
-clinext new --appName='MyApp'
+clinext app new --appName='MyApp'
 ```
 
 ### Help
 ```bash
-clinext app -h
+clinext app new -h
 ```
