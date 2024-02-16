@@ -190,7 +190,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'reference/overview',
+            docId: 'reference/clinext',
             position: 'left',
             label: 'Reference',
           },

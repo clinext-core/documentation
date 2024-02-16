@@ -8,28 +8,39 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
 
 - CliNext is globally available
 
+## CliNext.payload
 
-<JSONSchemaViewer schema={{
-    	"title": "CliNext",
-    	"type": "object",
-        "description": "Allows for schema to be seen",
-    	"properties": {
-    		"payload": {
-    			"type": "object",
-                "description":"Current payload"
-    		},
-            "fs": {
-    			"type": "object",
-                "description": "Filesystem"
-    		},
-    		"modes": {
-    			"type": "array",
-                "enum":[
-                    "in",
-                    "out",
-                    "display"
-                ],
-                "description":"Transformer modes"
-    		},                        
-    	}    	
-    }} />
+- ```CliNext.payload``` gives access to the current payload.
+- Can be read and written 
+
+**Example**
+```js
+CliNext.payload.destination = `${CliNext.payload.appPath}/features/${CliNext.payload.featureId}`
+```
+
+
+## CliNext.prompt
+
+- ```CliNext.prompt``` gives access to the prompting functions.
+- Can be called 
+
+### CliNext.prompt.ask
+- Ask a question to the user
+- Can be either a single question (object) or an array of questions
+- Async function
+- Can be called
+
+**Example**
+```js
+await CliNext.prompt.ask([
+    {
+        name: 'featureId',
+    },
+])
+```
+
+## CliNext.env
+
+- ```CliNext.env``` conveninetly gives the current environment values.
+- Can be called 
+- env files: ```.env``` for production and ```.env.development```for local development.
