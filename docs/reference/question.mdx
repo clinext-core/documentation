@@ -57,40 +57,28 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
 
 You can pass the name of the transformer in a command <i>questions</i>.
 
-**Command**
+In any **Command** (```src/commands``` folder)
 ```js
 export default ({
     _clinextType: "command",
     name: 'schema',
-    description: 'Generate schema documentation 🐝',
     questions: [
     {
         name: 'appPath',
-        message: "App to add a feature to",
+        message: "Path to app",
         validators: [{ id: 'nonempty' }]
     },
 ]
 })
 ```
 
-**CliNext.prompt.ask**
+In a command handler **CliNext.prompt.ask**
 ```js
 await CliNext.prompt.ask([
     {        
         name: 'appPath',
-        message: "App to add a feature to",
+        message: "Path to app",
         validators: [{ id: 'nonempty' }]        
     },
 ])
-```
-
-Example
-```js
-{
-    name: 'appPath',
-    message: "App to add a feature to",
-    validators: [{ 
-        id: 'nonempty' 
-    }]
-},
 ```
