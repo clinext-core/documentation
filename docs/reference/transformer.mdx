@@ -43,7 +43,8 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
     			"type": "string"
     		},
             "template": {
-    			"type": "string"
+    			"type": "string",
+                "description": "The template is a regular [ejs](https://ejs.co) template. It will compile by using CliNext.payload as its data source."
     		},        
             "params": {
     			"type": "object",                
@@ -90,12 +91,14 @@ To use a previously declared transformer, pass its id and params if needed:
 
 
 ### Inline
+
+#### With a handler
 ```js
 {
     ...
     transformers: [
         {
-            modes: [...],
+            ...,
             handler: ({ input }) => {
                ...
             }
@@ -122,14 +125,14 @@ To use a previously declared transformer, pass its id and params if needed:
 }
 ```
 
-### Template
+#### With a template
 
 ```js
 {
     ...
     transformers: [
         {
-            modes: [...],
+            ...,
             template: '...<%= payloadVariable %>...'
         }
     ]
