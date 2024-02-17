@@ -81,10 +81,9 @@ As you can see the command is quite empty at this point. Let's start by defining
 
 ### Craft questions
 For this command we'll need:
-- The id of cli
-- The description
+- The id of the cli (the unique command line entry to the cli, the one we will use to call it)
 - The destination (folder)
-- The package manager the user wants to use
+- The package manager the user wants to use (yarn, npm, pnpm)
 - Whether the user wants to install dependencies or not
 - Whether the user wants to initialize a git repository or not
 
@@ -285,31 +284,11 @@ Examples:
 ### Build the handler 
 
 We can now build the command handler. Since we are going to generate a project, we'll need a good generator. We'll use the  [*chunks extension*](https://github.com/@clinext/chunk-extension) that's made for this task.
-
+#TODO
 
 ## Create the ```extension new```  command
-```extension new``` will generate a new extension project
+#TODO
 
-- Go to ```src/commands```
-- Create the ```src/commands/app``` and ```src/commands/extensions``` folders
-- Add a ```src/commands/app/main.js``` and ```src/commands/extensions/main.js``` files. These files are necessary for every command folder
-- Add a ```src/commands/app/new.js``` and ```src/commands/extensions/new.js``` files. These files will hold the actual code for creating new project for the app and the extension.
-
-
-```js
-export default ({
-  _clinextType: 'command',  
-  name: 'app',
-  description: `App management`,
-  questions: [
-  ],
-  example: "$0 app",
-  handler: async () => {
-    console.log('App management. Please use the help.')
-  }
-})
-```
-## Write handler logic with chunk 
-
+## Release
 
 The project is available at [https://github.com/clinext-org/generator](https://github.com/clinext-org/generator)
