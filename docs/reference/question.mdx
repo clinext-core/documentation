@@ -37,16 +37,28 @@ import JSONSchemaViewer from "@theme/JSONSchemaViewer"
     		},
             "validators": {
     			"type": "array",                
-                "description":"Validators"
+                "description": "Validators"
     		},
             "transformers": {
     			"type": "array",                
-                "description":"Transformers"
+                "description": "Transformers"
     		},
     		"sideEffects": {
     			"type": "array",                
-                "description":"Side effects"
-    		},            
+                "description": "Side effects"
+    		},
+            "storeValue": {
+    			"type": "boolean",                
+                "description": "Store input value"
+    		},         
+            "loadFromStoreOnInit": {
+    			"type": "boolean",                
+                "description": "Store input value"
+    		}, 
+             "storeDomain": {
+    			"type": "string",                
+                "description": "Store domain"
+    		},         
     	},
     	"required": ["name",]
     }} 
