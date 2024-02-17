@@ -166,7 +166,7 @@ const config = {
         items: [          
           {
             type: 'doc',
-            docId: 'gettingstarted/quickstart',
+            docId: 'gettingstarted/requirements',
             position: 'left',
             label: 'Getting started 🚀',
           },
