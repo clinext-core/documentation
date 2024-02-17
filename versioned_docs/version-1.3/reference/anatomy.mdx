@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+---
+
+# Anatomy of a CliNext app
+
+## Project structure
+```bash
+├── src
+├──── app.js
+├──── commands
+├────── command A
+├──────── sub command X
+├──────── sub command Y
+├────── command B
+├──────── sub command Z
+├──────── sub command W
+├──── extensions
+├──── questions
+├──── transformers
+├──── validators
+├── clinext.config.js
+├── .env
+└── package.json
+```
+
+- The clinext config is clinext.config.js
+- The clinext app entry point is index.js
+- The local extensions are in /src/extensions

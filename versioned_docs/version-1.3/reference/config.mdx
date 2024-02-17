@@ -1,0 +1,55 @@
+---
+sidebar_position: 1
+---
+
+import JSONSchemaViewer from "@theme/JSONSchemaViewer"
+
+# Config
+
+- Location ```/clinext.config.js```
+
+
+### Schema
+
+<JSONSchemaViewer schema={{
+    	"title": "CliNext",
+    	"type": "object",
+        "description": "",
+    	"properties": {
+            "__clinextApiVersion":{
+                "type": "string",
+                "description":"Semver value of compatible CliNext versions."
+            },
+    		"name": {
+    			"type": "string",
+                "description":"CLI name (actual bin value)"
+    		},
+            "epilog": {
+    			"type": "string",
+                "description":"CLI epilog"
+    		},
+            "usage": {
+    			"type": "string",
+                "description": "Usage description"
+    		},
+    		"extensions": {
+    			"type": "array",                
+                "description":"Extension list"
+    		},                                   
+    	},
+        required: ['__clinextApiVersion', 'name']
+    }} />
+
+### Example
+
+```js
+export default ({
+  __clinextApiVersion: "1.0.0",
+  name: "@servable/cli",
+  usage: "servable <command>",
+  epilog: "Made by servable",
+  extensions: [
+    "@clinext/chunks-extension"
+  ]
+})
+```

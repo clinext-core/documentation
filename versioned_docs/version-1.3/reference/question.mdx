@@ -1,0 +1,84 @@
+---
+sidebar_position: 4
+---
+
+import JSONSchemaViewer from "@theme/JSONSchemaViewer"
+
+# Question
+
+- Project wide question in the form of a _cliNext file in <b>src/questions/</b>.
+- To inherit a question the only required argument is ```name```. The rest of the arguments will be inherited.
+- Order of precedence: **CliNext.prompt.ask** > **command** > **src/questions**
+- A **CliNext.prompt.ask** question inherits a matching **command** question if there's any
+- If there's no matching **command** question, **CliNext.prompt.ask** question inherits a matching **src/questions** question if there's any
+- A **command** question inherits a **src/questions** question if there's any
+- A **CliNext.prompt.ask** question inherits a **command** question
+- A question defined by **Command** takes precedence over a question defined in **Command**
+
+<JSONSchemaViewer schema={{
+    	"title": "Question",
+    	"type": "object",
+        "description": "Allows for schema to be seen",
+    	"properties": {
+    		"_clinextType": {
+    			"type": "string",
+                "default": "question",
+                "enum": [
+                    "question",
+                ],
+    		},
+            "name": {
+    			"type": "string",
+                "description": "Unique ID"
+    		},
+            "description": {
+    			"type": "string",
+                "description": "Command description"
+    		},
+            "validators": {
+    			"type": "array",                
+                "description":"Validators"
+    		},
+            "transformers": {
+    			"type": "array",                
+                "description":"Transformers"
+    		},
+    		"sideEffects": {
+    			"type": "array",                
+                "description":"Side effects"
+    		},            
+    	},
+    	"required": ["name",]
+    }} 
+/>
+
+
+## Usage
+
+You can pass the name of the transformer in a command <i>questions</i>.
+
+In any **Command** (```src/commands``` folder)
+```js
+export default ({
+    _clinextType: "command",
+    name: 'schema',
+    questions: [
+    {
+        name: 'appPath',
+        message: "Path to app",
+        validators: [{ id: 'nonempty' }]
+    },
+]
+})
+```
+
+In a command handler **CliNext.prompt.ask**
+```js
+await CliNext.prompt.ask([
+    {        
+        name: 'appPath',
+        message: "Path to app",
+        validators: [{ id: 'nonempty' }]        
+    },
+])
+```

@@ -1,0 +1,70 @@
+---
+sidebar_position: 2
+---
+
+import JSONSchemaViewer from "@theme/JSONSchemaViewer"
+
+# CliNext
+
+- CliNext is globally available
+
+## CliNext.payload
+
+- ```CliNext.payload``` gives access to the current payload.
+- Can be read and written 
+
+**Example**
+```js
+CliNext.payload.destination = `${CliNext.payload.appPath}/features/${CliNext.payload.featureId}`
+```
+
+
+## CliNext.prompt
+
+- ```CliNext.prompt``` gives access to the prompting functions.
+- Can be called 
+
+### CliNext.prompt.ask
+- Ask a question to the user
+- Can be either a single question (object) or an array of questions
+- Async function
+- Can be called
+
+**Example**
+```js
+await CliNext.prompt.ask([
+    {
+        name: 'featureId',
+    },
+])
+```
+
+## CliNext.env
+
+- ```CliNext.env``` conveninetly gives the current environment values.
+- Can be called 
+- env files: ```.env``` for production and ```.env.development```for local development.
+
+
+## CliNext.template
+
+- ```CliNext.template``` gives access to the template engine.
+- Can be called
+
+**Example**
+```js
+const data = await CliNext.template.render({ template: ``, data: {myVar: "value"} })
+```
+
+## CliNext.spawn
+
+- Spawns a cli command.
+- Can be called
+
+*Example*
+```js
+const options = {
+    cwd: destination
+}
+await toolbox.spawn('git', ['init', '--quiet', '--initial-branch=main'], options)
+```
