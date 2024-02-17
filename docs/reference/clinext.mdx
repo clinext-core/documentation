@@ -68,3 +68,51 @@ const options = {
 }
 await toolbox.spawn('git', ['init', '--quiet', '--initial-branch=main'], options)
 ```
+
+## CliNext.ui
+
+- Namespace for drawing custom elements on the screen
+- Can be called
+
+### CliNext.ui.drawSectionHeader
+- Draws header text 
+
+<JSONSchemaViewer schema={{
+    	"title": "args",
+    	"type": "object",
+        "description": "",
+    	"properties": {
+    		"title": {
+    			"type": "string",
+                "description": "Title"
+    		},
+            "subTitle": {
+    			"type": "string",
+                "description": "Subtitle"
+    		},
+            "id": {
+    			"type": "string",
+                "description": "Unique ID"
+    		},
+    		"type": {
+    			"type": "array",
+                "enum":[
+                    "h1",
+                    "h2",                    
+                    "text",                    
+                ],
+                "description":"Element type",
+                "default": "text"
+    		},           
+    	},
+    	"required": ["title"]
+    }} />
+
+*Example*
+
+```js
+CliNext.ui.drawSectionHeader({
+    type: 'h1',
+    title: "Database configuration"
+})
+```

@@ -102,7 +102,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-core/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-core/documentation/tree/main/packages/create-docusaurus/templates/shared/',
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
@@ -111,7 +111,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-core/generator-clinext/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-core/documentation/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
