@@ -23,7 +23,7 @@ export default () => {
           max-w-3xl
         `}>
       <div className={`my-6`}>
-        <h2>{`Quick start`}</h2>
+        <h2>{`Quick start 🚀`}</h2>
       </div>
       <p className={``}>
         <h3>1. Generate a new project</h3>

@@ -168,7 +168,7 @@ const config = {
             type: 'doc',
             docId: 'gettingstarted/requirements',
             position: 'left',
-            label: 'Getting started 🚀',
+            label: 'Getting started',
           },
           {
             type: 'doc',
@@ -184,7 +184,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'tutorials/overview',
+            docId: 'tutorials/generator',
             position: 'left',
             label: 'Tutorials',
           },
