@@ -4,8 +4,8 @@ title: To refactor or not
 authors:
   name: Aboubacar Doucoure
   title: Creator of CliNext
-  url: https://github.com/clinext-core
-  image_url: https://github.com/clinext-core.png
+  url: https://github.com/clinext-org
+  image_url: https://github.com/clinext-org.png
 tags: [clinext, nodejs, parseserver]
 ---
 

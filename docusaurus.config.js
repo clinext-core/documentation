@@ -82,7 +82,7 @@ const config = {
     "docusaurus-theme-openapi-docs",
     "docusaurus-json-schema-plugin" //https://jy95.github.io/docusaurus-json-schema-plugin/docs/quick-start
   ],
-  
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -102,7 +102,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-core/documentation/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-org/documentation/tree/main/packages/create-docusaurus/templates/shared/',
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
@@ -111,7 +111,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/clinext-core/documentation/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/clinext-org/documentation/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -163,7 +163,7 @@ const config = {
           alt: 'Logo',
           src: 'img/icon.png',
         },
-        items: [          
+        items: [
           {
             type: 'doc',
             docId: 'gettingstarted/requirements',
@@ -255,7 +255,7 @@ const config = {
           //   to: '/blog', label: 'Blog', position: 'left'
           // },
           {
-            href: 'https://github.com/clinext-core',
+            href: 'https://github.com/clinext-org',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -317,7 +317,7 @@ const config = {
           //     },
           //     // {
           //     //   label: 'GitHub',
-          //     //   href: 'https://github.com/clinext-core/clinext-parse',
+          //     //   href: 'https://github.com/clinext-org/clinext-parse',
           //     // },
           //   ],
           // },
