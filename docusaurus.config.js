@@ -142,7 +142,7 @@ const config = {
         id: 'support_ukraine',
         content:
           `
-          <div className={""}> 
+          <div> 
             CliNext is not released yet. This is a work in progress.
           </div>`,
         backgroundColor: '#323232',
