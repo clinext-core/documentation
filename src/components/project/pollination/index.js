@@ -40,7 +40,7 @@ export default () => {
             {`We don't want to spend too much time on the CLI either 🤖`}
           </h2>
           <p className={`text-lg `}>
-            CliNext is built from the ground up to be easy to use, convention driven and extensible so that it's easy to kickstart a project and maintain it. It's api makes it easy to fetch steps remotely and execute them with powerful side effects, transformers and validators.
+            CliNext is built from the ground up to be easy to use, convention driven and extensible so that it's easy to kickstart a project and maintain it. It's api makes it easy to fetch questions remotely and execute them with powerful side effects, transformers and validators.
           </p>
           <p>
             <Link
