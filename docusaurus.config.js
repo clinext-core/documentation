@@ -139,15 +139,15 @@ const config = {
       //   },               
       // },
       announcementBar: {
-        id: 'support_ukraine',
+        id: 'pre-release',
         content:
           `
           <div> 
             CliNext is not released yet. This is a work in progress.
           </div>`,
-        backgroundColor: '#323232',
-        textColor: '#fff',
-        isCloseable: true,
+        backgroundColor: '#dadada',
+        textColor: '#121212',
+        isCloseable: false,
       },
       matomo: {
         // matomoUrl: (process.env.MATOMO_URL && process.env.MATOMO_URL.length) ? process.env.MATOMO_URL : 'https://your.matomo.instance/',
