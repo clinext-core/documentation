@@ -4,8 +4,20 @@ sidebar_position: 1
 
 # Build the CliNext generator
 
+## Before you begin  
+
+### Prerequisites
+- A Linux computer (Mac OS, Ubuntu, ...)
+- A terminal
+
+### What you'll learn
+
+- How to ...
+- How to ...
+
+### What you'll build
+
 We are going to build step by step the CliNext generator app.
-Environment: Mac OS Sonoma
 
 ## Generate the project
 ### Install [Node JS]
@@ -292,3 +304,7 @@ We can now build the command handler. Since we are going to generate a project, 
 ## Release
 
 The project is available at [https://github.com/clinext-org/generator](https://github.com/clinext-org/generator)
+
+## Summary
+- To ..., do ...
+- ...
