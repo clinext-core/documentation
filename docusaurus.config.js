@@ -138,17 +138,17 @@ const config = {
       //     fontSize: 14
       //   },               
       // },
-      announcementBar: {
-        id: 'pre-release',
-        content:
-          `
-          <div> 
-            CliNext is not released yet. This is a work in progress.
-          </div>`,
-        backgroundColor: '#dadada',
-        textColor: '#121212',
-        isCloseable: false,
-      },
+      // announcementBar: {
+      //   id: 'pre-release',
+      //   content:
+      //     `
+      //     <div> 
+      //       CliNext is not released yet. This is a work in progress.
+      //     </div>`,
+      //   backgroundColor: '#dadada',
+      //   textColor: '#121212',
+      //   isCloseable: false,
+      // },
       matomo: {
         // matomoUrl: (process.env.MATOMO_URL && process.env.MATOMO_URL.length) ? process.env.MATOMO_URL : 'https://your.matomo.instance/',
         // siteId: (process.env.MATOMO_SITE_ID && process.env.MATOMO_SITE_ID.length) ? process.env.MATOMO_SITE_ID : 'ID',
