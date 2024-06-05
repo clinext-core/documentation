@@ -38,7 +38,9 @@ export default () => {
             {`${siteConfig.title}`} <i className='text-gray-600 dark:text-gray-400'> framework</i>
           </h1>
           <p className={`text-lg `}>
-          An open source opinionated <b>Node JS</b> CLI framework to help you build modern CLIs. Get ready to change the way you code your CLI!
+          An open source opinionated <b>Node JS</b> CLI framework to help you build modern CLIs. Get ready to change the way you code your <b>CLI</b>.
+          Use extensions, transformers, side effects, and more.
+          
           </p>
           <div className={`
             grid 
