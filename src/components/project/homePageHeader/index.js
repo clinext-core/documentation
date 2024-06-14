@@ -34,7 +34,7 @@ export default () => {
           pt-8     
           max-w-md
         `}>
-          <h1 className='text-6xl'>
+          <h1 className='md:text-7xl text-6xl font-bold text-[#e76f51]'>            
             {`${siteConfig.title}`} <i className='text-gray-600 dark:text-gray-400'> framework</i>
           </h1>
           <p className={`text-lg `}>
